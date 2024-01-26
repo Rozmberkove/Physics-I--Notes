@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>notes</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#physics-1---mechanics"
+id="toc-physics-1---mechanics">PHYSICS 1 - Mechanics</a>
+<ul>
+<li><a href="#kinematics" id="toc-kinematics">Kinematics</a>
+<ul>
+<li><a href="#topic-1-1-1-dimensional-kinematics"
+id="toc-topic-1-1-1-dimensional-kinematics">Topic 1-1: 1-Dimensional
+Kinematics</a></li>
+<li><a href="#topic-1-2-vector-mathematics-i"
+id="toc-topic-1-2-vector-mathematics-i">Topic 1-2: Vector Mathematics
+I</a></li>
+<li><a href="#topic-1-3-problem-solving-in-two-dimensional-kinematics"
+id="toc-topic-1-3-problem-solving-in-two-dimensional-kinematics">Topic
+1-3: Problem Solving in Two-Dimensional Kinematics</a></li>
+<li><a href="#topic-1-4-advanced-kinematics"
+id="toc-topic-1-4-advanced-kinematics">Topic 1-4: Advanced
+Kinematics</a></li>
+</ul></li>
+<li><a href="#newtonian-dynamics-i---translation"
+id="toc-newtonian-dynamics-i---translation">Newtonian Dynamics I -
+Translation</a>
+<ul>
+<li><a href="#topic-2-1-force-inertia-and-newtons-laws"
+id="toc-topic-2-1-force-inertia-and-newtons-laws">Topic 2-1: Force,
+Inertia, and Newton’s Laws</a></li>
+<li><a href="#topic-2-2-friction" id="toc-topic-2-2-friction">Topic 2-2:
+Friction</a></li>
+<li><a href="#topic-2-3-newtonian-dynamics-problem-solving-process"
+id="toc-topic-2-3-newtonian-dynamics-problem-solving-process">Topic 2-3:
+Newtonian Dynamics Problem Solving Process</a></li>
+<li><a href="#topic-2-4-multi-object-dynamics"
+id="toc-topic-2-4-multi-object-dynamics">Topic 2-4: Multi-Object
+Dynamics</a></li>
+</ul></li>
+<li><a href="#newtonian-dynamics-ii---advanced-translation"
+id="toc-newtonian-dynamics-ii---advanced-translation">Newtonian Dynamics
+II - Advanced Translation</a>
+<ul>
+<li><a href="#topic-3-1-circular-motion"
+id="toc-topic-3-1-circular-motion">Topic 3-1: Circular Motion</a></li>
+<li><a href="#topic-3-2-simple-harmonic-motion"
+id="toc-topic-3-2-simple-harmonic-motion">Topic 3-2: Simple Harmonic
+Motion</a></li>
+</ul></li>
+<li><a href="#block-4-newtonian-dynamics-iii---rotation"
+id="toc-block-4-newtonian-dynamics-iii---rotation">Block 4: Newtonian
+Dynamics III - Rotation</a>
+<ul>
+<li><a href="#topic-4-1-vector-mathematics-ii"
+id="toc-topic-4-1-vector-mathematics-ii">Topic 4-1: Vector Mathematics
+II</a></li>
+<li><a
+href="#topic-4-2-torque-moment-of-inertia-and-newtons-2nd-law-for-rotation"
+id="toc-topic-4-2-torque-moment-of-inertia-and-newtons-2nd-law-for-rotation">Topic
+4-2: Torque, Moment of Inertia, and Newton’s 2nd Law for
+Rotation</a></li>
+<li><a href="#topic-4-3-problem-solving-with-newtonian-dynamics"
+id="toc-topic-4-3-problem-solving-with-newtonian-dynamics">Topic 4-3:
+Problem Solving with Newtonian Dynamics</a></li>
+<li><a href="#topic-4-4-rolling" id="toc-topic-4-4-rolling">Topic 4-4:
+Rolling</a></li>
+</ul></li>
+<li><a href="#the-work-energy-theorem"
+id="toc-the-work-energy-theorem">The Work-Energy Theorem</a>
+<ul>
+<li><a href="#topic-5-1-work-and-translational-kinetic-energy"
+id="toc-topic-5-1-work-and-translational-kinetic-energy">Topic 5-1: Work
+and Translational Kinetic Energy</a></li>
+<li><a href="#topic-5-2-rotational-kinetic-energy-and-thermal-energy"
+id="toc-topic-5-2-rotational-kinetic-energy-and-thermal-energy">Topic
+5-2: Rotational Kinetic Energy and Thermal Energy</a></li>
+<li><a href="#topic-5-3-potential-energy"
+id="toc-topic-5-3-potential-energy">Topic 5-3: Potential Energy</a></li>
+</ul></li>
+<li><a href="#the-impulse-momentum-theorem"
+id="toc-the-impulse-momentum-theorem">The Impulse-Momentum Theorem</a>
+<ul>
+<li><a href="#topic-6-1-the-impulse-momentum-theorem"
+id="toc-topic-6-1-the-impulse-momentum-theorem">Topic 6-1: The
+Impulse-Momentum Theorem</a></li>
+<li><a href="#topic-6-2-collisions" id="toc-topic-6-2-collisions">Topic
+6-2: Collisions</a></li>
+<li><a href="#topic-6-3-angular-momentum"
+id="toc-topic-6-3-angular-momentum">Topic 6-3: Angular Momentum</a></li>
+</ul></li>
+<li><a href="#more-calculus-in-physics"
+id="toc-more-calculus-in-physics">More Calculus in Physics</a>
+<ul>
+<li><a href="#topic-7-1-potential-energy-functions"
+id="toc-topic-7-1-potential-energy-functions">Topic 7-1: Potential
+Energy Functions</a></li>
+<li><a href="#topic-7-2-inertial-calculus"
+id="toc-topic-7-2-inertial-calculus">Topic 7-2: Inertial
+Calculus</a></li>
+<li><a href="#topic-7-3-advanced-gravitation"
+id="toc-topic-7-3-advanced-gravitation">Topic 7-3: Advanced
+Gravitation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="physics-1---mechanics">PHYSICS 1 - Mechanics</h1>
+<h2 id="kinematics">Kinematics</h2>
+<h3 id="topic-1-1-1-dimensional-kinematics">Topic 1-1: 1-Dimensional
+Kinematics</h3>
+<h4 id="calculus-based-equations">Calculus Based Equations</h4>
+<ul>
+<li><span class="math inline">\(v_{x}(t)\equiv
+\frac{dx(t)}{dt}\)</span></li>
+<li><span class="math inline">\(a_{x}\equiv
+\frac{dv_{x}(t)}{dt}=\frac{d^2x(t)}{dt^2}\)</span></li>
+<li><span class="math inline">\(x(t) = x(t_{i})+
+\int_{t_{i}}^{t}v_{x}(t&#39;) \, dt&#39;\)</span></li>
+<li><span class="math inline">\(v_x(t) = v(t_{i})+
+\int_{t_{i}}^{t}a_{x}(t&#39;) \, dt&#39;\)</span></li>
+</ul>
+<h5 id="example-1">Example #1</h5>
+<p>The acceleration of a train moving in a straight line is given by
+<span class="math inline">\(a_x(t) = \left(5.7
+\frac{\text{m}}{\text{s}^3} \right) \cdot t\)</span>. If its velocity at
+<span class="math inline">\(t_{i}= 1 \text{s}\)</span> is <span
+class="math inline">\(v_{i,x} = 2.93 \text{m}/\text{s}\)</span>, what is
+its velocity at <span class="math inline">\(t_{f} = 3
+\text{s}\)</span></p>
+<ul>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \int_{t_i}^{t_f}
+a_{x}(t&#39;) \, dt&#39;\]</span></li>
+</ul>
+<blockquote>
+<p>Let <span class="math inline">\(c = 5.7
+\frac{\text{m}}{\text{s}^3}\)</span></p>
+</blockquote>
+<ul>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \int_{t_i}^{t_f}
+ct&#39; \, dt\]</span></li>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \frac{1}{2}ct^3
+\bigg\rvert_{t_i}^{t_f}\]</span></li>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \frac{1}{2}c
+(t_{f}^2 + t_{i}^2)\]</span></li>
+</ul>
+<h5 id="example-2">Example #2</h5>
+<p>The acceleration of a train moving in a straight line is given by
+<span class="math inline">\(a_x(t) = \left(5.7
+\frac{\text{m}}{\text{s}^3} \right) \cdot t\)</span>. If its velocity at
+<span class="math inline">\(t_{i}= 1 \text{s}\)</span> is <span
+class="math inline">\(v_{i,x} = 2.93 \text{m}/\text{s}\)</span>, what is
+its displacement at <span class="math inline">\(t_{f} = 3
+\text{s}\)</span></p>
+<ul>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \int_{t_i}^{t_f}
+a_{x}(t&#39;) \, dt&#39;\]</span></li>
+</ul>
+<blockquote>
+<p>Let <span class="math inline">\(c = 5.7
+\frac{\text{m}}{\text{s}^3}\)</span></p>
+</blockquote>
+<ul>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \int_{t_i}^{t}
+ct&#39; \, dt\]</span></li>
+<li><span class="math display">\[v_{f,x} = v_{i,x} + \frac{1}{2}ct^3
+\bigg\rvert_{t_i}^{t}\]</span></li>
+<li><span class="math display">\[v_{f,x} = \]</span></li>
+<li><span class="math display">\[\Delta x = \int_{t_i}^{t_f}
+\left(v_{i,x} + \frac{1}{2}c (t^2 + t_{i}^2)\right) \, dx\]</span></li>
+<li><span class="math display">\[\Delta x = \left[ v_{i,x} t +
+\frac{1}{6}ct^3 - \frac{1}{2}ct_{f}^2 t \right]_{t_i}^{t_{f}}
+\]</span></li>
+<li><span class="math display">\[\Delta x = v_{i,x} (t_f - t_i) +
+\frac{1}{6}c(t_{f}^{3}-t_{i}^{3}) - \frac{1}{2}ct_{f}^2 (t_f -
+t_i)\]</span></li>
+</ul>
+<h3 id="topic-1-2-vector-mathematics-i">Topic 1-2: Vector Mathematics
+I</h3>
+<p><span class="math display">\[\begin{align*}\vec{V}&amp;
+=V_{x}\hat{i}+V_{y}\hat{j}+ V_{z}\hat{k}\\ V &amp;=
+\sqrt{V_{x}^2+V_{y}^2+V_{z}^2} \end{align*}\]</span></p>
+<p>Displacement: <span class="math inline">\(\Delta \vec{r} = \Delta
+x\hat{i} + \Delta y\hat{j}+\Delta z\hat{k}\)</span></p>
+<p>Weight: <span class="math inline">\(\vec{WE_b} = -m_b \cdot
+g\hat{j}\)</span></p>
+<h4 id="example-1-1">Example #1</h4>
+<p>Let <span class="math inline">\(\vec{V_1} = \langle 3,
+4\rangle\)</span> and <span class="math inline">\(\vec{V_2} =\langle
+-4,-3\rangle\)</span>. <span class="math inline">\(\vec{V_4} =
+\vec{V_{1}} - \vec{V_{2}}\)</span></p>
+<p><span class="math inline">\(V_{4} = \langle 3, 4\rangle - \langle -4,
+-3\rangle = \langle 7,7 \rangle\)</span> <span
+class="math display">\[\boxed{V_{4x} &gt; 0 \text{ and }
+V_{4y}&gt;0}\]</span></p>
+<h4 id="example-2-1">Example #2</h4>
+<p>Let <span class="math inline">\(\vec{V_1} = \langle 3,
+4\rangle\)</span> and <span class="math inline">\(\vec{V_2} =\langle
+-4,-3\rangle\)</span>. <span class="math inline">\(\vec{V_5} =
+-\vec{V_{1}} + \vec{V_{2}}\)</span></p>
+<p><span class="math inline">\(\vec{V_5} = -\langle 3,4 \rangle +
+\langle -4, -3\rangle = \langle -7,-7 \rangle\)</span></p>
+<p><span class="math inline">\(V_5 = \sqrt{2\cdot 49} =
+2\sqrt{2}\)</span></p>
+<h4 id="d-vector-functions">2D Vector Functions</h4>
+<p align="center">
+<img src="img1.png" style="height: 100px; width:auto;"/>
+</p>
+<p>If <span class="math inline">\(\vec{a}(t) =
+a_{0}e^{\frac{t}{t_i}}\hat{i}\)</span> and <span
+class="math inline">\(\vec{v}(t_i)\)</span> is shown, then what is <span
+class="math inline">\(\vec{v}(t_f) = \vec{v}(t_i) +\int_{t_i}^{t_f}
+\vec{a}(t)\, dt\)</span></p>
+<p>Steps:</p>
+<p><span class="math display">\[\begin{align*} v_{x}(t_f) &amp;=
+v_{x}(t_i) + \int_{t_i}^{t_f}a_x(t)\, dt\\ &amp; = v_{i}\sin \theta +
+\int_{t_f}^{t_i}a_{0}e^{\frac{t}{t_i}} \, dt \\ &amp; = v_{i}\sin \theta
++ a_{0}t_{i}e^{\frac{t}{t_i}} \bigg\rvert_{t_i}^{t_f}  \\ &amp;= v_i
+\sin\theta + a_0 t_i (e^{\frac{t_f}{t_i}}-e^1) \end{align*}
+\]</span></p>
+<p><span class="math display">\[\begin{align*}v_{y}(t_f) &amp;=
+v_{y}(t_i) + \int_{t_i}^{t_f}a_y(t)\, dt \\ &amp;= v_i\cos\theta +
+\int_{t_i}^{t_f} 0 \, dt\\ &amp;= v_i\cos\theta
+\end{align*}\]</span></p>
+<p><span class="math display">\[\boxed{\vec{v}(t_{f}) = [v_i \sin\theta
++ a_0 t_i (e^{\frac{t_f}{t_i}}-e^1)]\hat{i} +
+[v_i\cos\theta]\hat{j}}\]</span></p>
+<h3 id="topic-1-3-problem-solving-in-two-dimensional-kinematics">Topic
+1-3: Problem Solving in Two-Dimensional Kinematics</h3>
+<h4 id="equations">Equations</h4>
+<ol type="1">
+<li><span
+class="math inline">\(\vec{r}(t)=x(t)\hat{i}+y(t)\hat{j}\)</span></li>
+<li><span
+class="math inline">\(v(t)=|\vec{v}(t)|=\sqrt{v_{x}(t)^2+v_{y}(t)^2}\)</span></li>
+<li><span class="math inline">\(\vec{v}(t)=\frac{d\vec{r}(t)}{dt} =
+\vec{v}(t_{i})+\int_{t_i}^{t}\vec{a}(t&#39;)\, dt&#39;\)</span></li>
+<li><span
+class="math inline">\(\vec{a}(t)=\frac{d\vec{v}(t)}{dt}\)</span></li>
+<li><span class="math inline">\(\vec{r}(t)=\frac{d\vec{r}(t)}{dt} =
+\vec{r}(t_{i})+\int_{t_i}^{t}\vec{v}(t&#39;)\, dt&#39;\)</span></li>
+<li>For SPM: <span
+class="math inline">\(\vec{a}(t)=0\hat{i}-g\hat{j}\)</span></li>
+</ol>
+<h4 id="example-1-2">Example 1</h4>
+<h5 id="part-1">Part 1</h5>
+<p>Four identical baseballs are thrown across a baseball field with the
+same initial speed, but they are tossed at different launch angles <span
+class="math inline">\(\theta\)</span>. Air resistance is negligible
+along each trajectory. Rank the paths according to the time the baseball
+is in the air.</p>
+<p align="center">
+<img src="img2.png" style="height: 200px; width:auto;"/>
+</p>
+<p><span class="math display">\[\boxed{D&lt;C&lt;B&lt;A}\]</span></p>
+<p><strong>Conceptual:</strong> Bigger values of <span
+class="math inline">\(v_{i,y}\)</span> take longer to slow to zero with
+the same <span class="math inline">\(a_y\)</span></p>
+<ul>
+<li><span class="math inline">\(y(t_{hit})=y(0)\)</span></li>
+<li><span class="math inline">\(v_{y}(t_{hit})=-v_{y}(0)\)</span></li>
+<li><span class="math inline">\(v_{y}(t_{peak})=0\)</span></li>
+</ul>
+<p><span class="math inline">\(v_{y}(t_{peak}) =
+v_{y}(0)+\int_{0}^{t_{peak}}-g \, dt \rightarrow 0 =
+v_{i}\sin\theta-gt_{peak} \rightarrow t_{peak} =
+\frac{v_{i}\sin\theta}{g} \rightarrow t_{hit}=2t_{peak}\)</span></p>
+<p>As <span class="math inline">\(\theta\)</span> increases, <span
+class="math inline">\(t_{hit}\)</span> increases for <span
+class="math inline">\((0 &lt; \theta&lt;90^{\circ})\)</span></p>
+<h5 id="part-2">Part 2</h5>
+<p>How far does each travel horizontally?</p>
+<p><strong>Unknown:</strong> <span
+class="math inline">\(x(t_{hit})\)</span></p>
+<p><strong>Knowns:</strong> <span class="math inline">\(v_{i},\theta,
+a_{y}=-g, a_{x}=0, t_{hit}=\frac{2v_{i}\sin\theta}{g}\)</span></p>
+<ul>
+<li><span class="math inline">\(v_{x}(t)=v_{x}(0)+
+\int_{0}^{t}a_{x}(t&#39;)\, dt&#39; = v_{i}\cos\theta\)</span></li>
+<li><span class="math inline">\(x(t_{hit})=x(0)+\int_{0}^{t_{hit}}
+v_{x}(t)\, dt = 0 + v_{i}\cos\theta \cdot t_{hit} = v_{i}\cos\theta
+\left(\frac{2v_{i}\sin\theta}{g}\right)
+=\frac{2v_{i}^2\sin\theta\cos\theta}{g} =
+\underbrace{\boxed{\frac{2v_{i}^2\sin2\theta}{g}}}_{\text{Maximum when }
+\theta = 45^{\circ}}\)</span></li>
+</ul>
+<h4 id="example-2-2">Example 2</h4>
+<p>An airplane’s vertical acceleration <span
+class="math inline">\(a_{y}(t)\)</span> depends on its horizontal speed
+<span class="math inline">\(v_{x}(t)\)</span>. If the plane’s vertical
+and horizontal components of acceleration are <span
+class="math inline">\(a_{y}(t)=\left[\left(\frac{v_{x}(t)}{v_{i,x}} -
+1\right)\right] \cdot g\)</span> and <span
+class="math inline">\(a_{x}(t)=Bt\)</span> find the speed <span
+class="math inline">\(v(t)\)</span> of the plane in terms of <span
+class="math inline">\(v_{i,x}\)</span>, <span
+class="math inline">\(v_{i,y}\)</span> <span
+class="math inline">\(B\)</span>, and <span
+class="math inline">\(g\)</span>. Assume <span
+class="math inline">\(t_{i}=0\)</span>.</p>
+<ol type="1">
+<li><p><span class="math display">\[\begin{align} v_x (t) &amp;= v_x(0)+
+\int_{0}^{t}a_{x}(t&#39;)\, dt\\ &amp;= v_{i,x}+\int_{0}^{t}Bt&#39;\,
+dt&#39;\\ &amp;= v_{i,x}+ \frac{1}{2}Bt^2 \end{align}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align}v_{y}(t) &amp;=
+v_{y}(0)+\int_{0}^{t} a_y(t&#39;)\, dt \\ &amp;=
+v_{i,y}+\int_{0}^{t}\left[\left(\frac{v_{x}(t)}{v_{i,x}} -
+1\right)\right] g\, dt&#39;\\ &amp;= v_{i, y} + \int_{0}^{t} \\ &amp;=
+v_{i,y}+ \int_{0}^{t} \left[\frac{v_{i,x}+
+\frac{1}{2}Bt&#39;^2}{v_{i,x}} - 1\right] g \, dt&#39; \\ &amp;=
+v_{i,y}+ \int_{0}^{t} \left[\frac{v_{i,x}+
+\frac{1}{2}Bt&#39;^2}{v_{i,x}} - \frac{v_{i,x}}{v_{i,x}}\right] g \,
+dt&#39; \\ &amp;= v_{i,y}+ \int_{0}^{t} \left[\frac{
+\frac{1}{2}Bt&#39;^2}{v_{i,x}}\right] g \, dt&#39; \\ &amp;= v_{i,y} +
+\frac{Bt^3}{6v_{i,x}}g\end{align}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align}|\vec{v}(t)| &amp;=
+\sqrt{\vec{v}_{x}(t)^2+\vec{v}_{y}(t)^2}\\ &amp;= \sqrt{\left(v_{i,y} +
+\frac{Bt^3}{6v_{i,x}}g\right)^2+ \left(v_{i,x}+
+\frac{1}{2}Bt^2\right)^2} \end{align}\]</span></p></li>
+</ol>
+<h3 id="topic-1-4-advanced-kinematics">Topic 1-4: Advanced
+Kinematics</h3>
+<h4 id="equations-1">Equations</h4>
+<ul>
+<li><span class="math display">\[\vec{v}_{av}\bigg\rvert_{t_i}^{t_f} =
+\frac{1}{t_f-t_i} \int_{t_i}^{t_f}\vec{v}(t) \, dt =
+\frac{\vec{r}(t_f)-\vec{r}(t_i)}{t_f-t_i}\]</span></li>
+<li><span class="math display">\[\vec{a}_{av}\bigg\rvert_{t_i}^{t_f} =
+\frac{1}{t_f-t_i} \int_{t_i}^{t_f}\vec{a}(t) \, dt =
+\frac{\vec{v}(t_f)-\vec{v}(t_i)}{t_f-t_i}\]</span></li>
+</ul>
+<h5 id="example-1-3">Example 1</h5>
+<p>A car undergoes an acceleration <span
+class="math inline">\(a_x(t)\)</span> from <span
+class="math inline">\(t_1\)</span> to <span
+class="math inline">\(t_2\)</span>. Given <span
+class="math inline">\(v_x(t)\)</span> and <span
+class="math inline">\(x(t_1)\)</span>, what is the correct expression
+for <span class="math inline">\(x(t_2)\)</span>? <span
+class="math display">\[x(t_2) = x(t_1)+ \int_{t_1}^{t_2}\left[v_x(t_1)+
+\int_{t_1}^{t}a_{x}(t&#39;)\, dt&#39;\right]\, dt\]</span></p>
+<h5 id="example-2-3">Example 2</h5>
+<p>From <span class="math inline">\(t_1\)</span> to <span
+class="math inline">\(t_2\)</span>, <span
+class="math inline">\(a_A(t)\)</span>. From <span
+class="math inline">\(t_2\)</span> to <span
+class="math inline">\(t_3\)</span>, <span
+class="math inline">\(a_B(t)\)</span>. Given <span
+class="math inline">\(v_x(t_1)\)</span>, how fast is it moving at <span
+class="math inline">\(t_3\)</span> i.e. <span
+class="math inline">\(v_x(t_3)=\)</span>?</p>
+<ul>
+<li><p><span class="math inline">\(v_{A,x}(t) =
+v_{A,x}(t_1)+\int_{t_1}^{t} a_{A,x}(t&#39;)\, dt&#39;\)</span></p></li>
+<li><p><span class="math inline">\(v_{A,x}(t_2) =
+v_{A,x}(t_1)+\int_{t_1}^{t_2} a_{A,x}(t)\, dt\)</span></p></li>
+<li><p><span class="math inline">\(v_{B,x}(t) = v_{A,x}(t_2) +
+\int_{t_2}^{t} a_{B,x}(t&#39;)\, dt&#39;\)</span></p></li>
+<li><p><span class="math inline">\(v_{B,x}(t_3) =
+\underbrace{v_{A,x}(t_1)+\int_{t_1}^{t_2} a_{A,x}(t)\, dt}_{v_x(t_2)} +
+\underbrace{\int_{t^2}^{t_3} a_{B,x}(t)\, dt}_{\Delta
+v_x}\)</span></p></li>
+</ul>
+<h5 id="example-3">Example 3</h5>
+<p>Given <span class="math inline">\(v_{car, x}(t)\)</span> and <span
+class="math inline">\(v_{\text{moto},x}(t)\)</span>,two vehicles reach
+same final position at the same time i.e. <span
+class="math inline">\(v_{\text{car},x} \neq
+v_{\text{moto},x}(t)\)</span> and <span
+class="math inline">\(x_{\text{car}}(t_f) =
+x_{\text{moto}}(t_f)\)</span>.</p>
+<ul>
+<li><span
+class="math inline">\(x_{\text{car}}(t_i)-x_{\text{moto}}(t_i)=0\)</span></li>
+<li><span class="math inline">\(x_{\text{car}}(t_f) =
+x_{\text{car}}(t_i) + \int_{t_i}^{t_f} v_{\text{car},x}\,
+dt\)</span></li>
+<li><span class="math inline">\(x_{\text{moto}}(t_f) =
+x_{\text{moto}}(t_i) + \int_{t_i}^{t_f} v_{\text{moto},x}\,
+dt\)</span></li>
+<li><span class="math inline">\(x_{\text{car}}(t_i) + \int_{t_i}^{t_f}
+v_{\text{car},x}\, dt = x_{\text{moto}}(t_i) + \int_{t_i}^{t_f}
+v_{\text{moto},x}\, dt\)</span></li>
+<li><span class="math inline">\(x_{\text{car}}(t_i)-x_{\text{moto}}(t_i)
+= \int_{t_i}^{t_f} v_{\text{moto},x} \, dt - \int_{t_i}^{t_f}
+v_{\text{car},x}(t)\,dt\)</span></li>
+</ul>
+<h5 id="example-4">Example 4</h5>
+<p>Given the velocity graph shown, which is true about <span
+class="math inline">\(v_{av}, x\)</span> <span
+class="math inline">\(a_{av,x}\)</span> and from <span
+class="math inline">\(t=t_i\)</span> to <span
+class="math inline">\(t=t_f\)</span>?</p>
+<p align="center">
+<img src="img3.png" style="height: 200px; width:auto;"/>
+</p>
+<ul>
+<li><span class="math inline">\(v_{av,x} &lt; 0\)</span></li>
+<li><span class="math inline">\(a_{av,x}&gt;0\)</span></li>
+<li><span class="math inline">\(\Delta x &lt; 0\)</span></li>
+</ul>
+<ol type="1">
+<li><p><span class="math inline">\(v_{av, x} = \frac{1}{\Delta t}
+\underbrace{\int_{t_i}^{t_f}v_x(t)\, dt}_{\text{Area under the curve
+&lt; 0}} = \frac{\Delta x}{\Delta t}\)</span></p></li>
+<li><p><span class="math inline">\(v_{av, x} = \frac{1}{\Delta t}
+\underbrace{\int_{t_i}^{t_f}a_x(t)\, dt}_{\text{Slope of the secant line
+&gt; 0}} = \frac{\Delta v_x}{\Delta t}\)</span></p></li>
+</ol>
+<h2 id="newtonian-dynamics-i---translation">Newtonian Dynamics I -
+Translation</h2>
+<h3 id="topic-2-1-force-inertia-and-newtons-laws">Topic 2-1: Force,
+Inertia, and Newton’s Laws</h3>
+<h4 id="forces">Forces</h4>
+<ol type="1">
+<li><p>Gravitational or Weight: <span
+class="math inline">\(\vec{F}_{G,Eb}\)</span> or <span
+class="math inline">\(\vec{W}_{Eb}\)</span></p></li>
+<li><p>Spring: <span
+class="math inline">\(\vec{F}_{sp,ab}\)</span></p></li>
+<li><p>Normal: <span
+class="math inline">\(\vec{N}_{TB}\)</span></p></li>
+<li><p>Friction: <span
+class="math inline">\(\underbrace{\vec{f}_{s,TB}}_{\text{Static}}\)</span>
+or <span
+class="math inline">\(\underbrace{\vec{f}_{k,TB}}_{\text{Kinetic}}\)</span></p></li>
+<li><p>Tension: <span
+class="math inline">\(\vec{T}_{SB}\)</span></p></li>
+</ol>
+<p>Forces #1 - #2: Magnitude and direction known in advance</p>
+<p>Forces #3 - #5: Components of contact force Need to use N2L to
+determine magnitude and/or direction</p>
+<p>Things in PHGN100 that are NOT Forces:</p>
+<ul>
+<li>Velocity</li>
+<li>Inertia</li>
+<li>Pressure</li>
+<li>Centripetal acceleration (Topic 3-1)</li>
+<li>Torque (Topic 4-2)</li>
+</ul>
+<h4 id="newtons-laws">Newtons Laws</h4>
+<ol type="1">
+<li><p>In an inertial frame, an object will move with a constant
+velocity unless acted upon by a net external force.</p></li>
+<li><p>The acceleration of a system is proportional to the net external
+force and inversely proportional to its inertial mass.</p></li>
+</ol>
+<p><span class="math display">\[\text{sys}=b: \Sigma_{j} \vec{F}_{j,b} =
+\vec{F}_{1,b} + \vec{F}_{2,b} + \cdots \vec{F}_{N,b}\]</span> <span
+class="math display">\[\vec{a}_{b} = \frac{\Sigma_{j}
+\vec{F}_{j,b}}{m_{b}}\]</span> <span class="math display">\[\Sigma_{j}
+\vec{F}_{j,b} = m_{b}\vec{a}_{b}\]</span></p>
+<ol start="3" type="1">
+<li>If object <span class="math inline">\(a\)</span> exerts a force on
+another object <span class="math inline">\(b\)</span>, there is an equal
+and opposite force acting from object <span
+class="math inline">\(b\)</span> on object <span
+class="math inline">\(a\)</span>. <span
+class="math display">\[\vec{F}_{ab} = -\vec{F}_{b,a}\]</span> <span
+class="math display">\[F_{ab}=F_{ba}\]</span></li>
+</ol>
+<h3 id="topic-2-2-friction">Topic 2-2: Friction</h3>
+<h4 id="equations-2">Equations</h4>
+<ul>
+<li><span class="math inline">\(f_{k,ab} = \mu_{k}N_{ab}\)</span></li>
+<li><span class="math inline">\(f_{s,ab} \leq
+\mu_{s}N_{ab}\)</span></li>
+<li><span class="math inline">\(f_{s,ab \text{ max}} =
+\mu_{s}N_{ab}\)</span></li>
+</ul>
+<h4 id="examples">Examples</h4>
+<p align="center">
+<img src="img4.png" style="height: 100px; width:auto;"/>
+</p>
+<h5 id="problem-1">Problem 1</h5>
+<p>You pull on a block as shown. If the magnitude <span
+class="math inline">\(\vec{F}_{Yb}\)</span> of your force is unchanged,
+but the angle <span class="math inline">\(\theta\)</span> is increased,
+how does the magnitude of the normal force <span
+class="math inline">\(\vec{N}_{tb}\)</span> from the table on the block
+change?</p>
+<p>Note: <span class="math inline">\((a_{b,y} =0)\)</span> <span
+class="math display">\[\sum_{j}\vec{F}_{jb} = m_{b}\vec{a}_b\]</span>
+<span class="math display">\[y: N_{tb}-W_{Eb} - F_{Yb}\sin(\theta) =
+\underbrace{m_{b}\vec{a}_{a,y}}_{0}\]</span> <span
+class="math display">\[N_{tb} = m_{b}g + F_{Yb}\sin(\theta)\]</span></p>
+<h5 id="problem-2">Problem 2</h5>
+<p>You pull on a block as shown which is slipping to the right. If the
+magnitude <span class="math inline">\(F_{Yb}\)</span> of your force is
+unchanged, but the angle <span class="math inline">\(\theta\)</span> is
+increased, how does the magnitude of the friction force from the table
+on the block change? <mark>(Kinetic Friction)<mark></p>
+<p><span class="math inline">\(f_{k, tb}= \mu_{k}N_{tb}
+\therefore\)</span> As <span class="math inline">\(\theta\)</span>
+increases <span class="math inline">\(N_{tb}\)</span> must
+increases.</p>
+<h5 id="problem-3">Problem 3</h5>
+<p>You pull on a block as shown, but the block does not slip. If the
+magnitude <span class="math inline">\(F_{Yb}\)</span> of your force is
+unchanged, but the angle <span class="math inline">\(\theta\)</span> is
+increased, how does the magnitude of the friction force from the table
+on the block change?</p>
+<p><span class="math inline">\((\vec{a}_b=0)\)</span></p>
+<p>For static friction: <span class="math inline">\(f_{s,tb} \leq
+\mu_{s}N_{tb}\cdots\)</span> Since we don’t know if its at the max
+value, this doesn’t help us. But we can use N2L!</p>
+<p><span class="math display">\[x: F_{Yb}\cos\theta - f_{s,tb} =
+m_{b}\underbrace{a_{b,x}}_{0}\]</span> <span
+class="math display">\[F_{Yb}\cos\theta = f_{s,tb}\]</span> <span
+class="math display">\[\boxed{\therefore f_{s,tb}\downarrow \text{ as }
+\theta \uparrow}\]</span></p>
+<h3 id="topic-2-3-newtonian-dynamics-problem-solving-process">Topic 2-3:
+Newtonian Dynamics Problem Solving Process</h3>
+<h4 id="problem-solving-process">Problem Solving Process</h4>
+<ol type="1">
+<li><p>Read and organize information. Read the entire problem first and
+then (if one is not provided) draw a picture representing the physical
+situation. On your picture (or the one provided) label and/or define
+quantities as needed. List quantities that are given (knowns) and the
+quantities you would like to solve for (unknowns).</p></li>
+<li><p>Choose and analyze your system(s). State which objects you will
+study and (if necessary) draw a free body diagram or extended free body
+diagram for that system that is consistent with your picture. Indicate
+any known velocities and accelerations in your picture or next to (but
+not on) the FBD/EFBDs. For some problems, you may need to do this more
+than once.</p></li>
+<li><p>Choose your physics tool(s). State which physics tool(s) you will
+use to solve the problem so that someone with a similar level of physics
+knowledge can easily interpret them. All of the tools we will use in
+this class are listed on the equation sheet if you ever need a
+reminder.</p></li>
+<li><p>Choose your coordinate system(s). Draw these on your picture,
+FBD, and/or EFBD, and then re-write your tools in terms of the
+coordinates and any known quantities you were given in the problem. Do
+your work symbolically at this point.</p></li>
+<li><p>Compare the number of equations you have to the number of
+unknowns. If the number of equations you have from your tools is equal
+to the number of unknowns you need to solve for, then you should have
+enough information to solve the problem. If you need more equations,
+consider any extra information or special conditions that might apply to
+the situation and write these as additional equations.</p></li>
+<li><p>Solve the equations for the unknowns. Typically, this will
+involve algebra, but in some cases you will need kinematics and/or
+calculus to complete the solution. Check that the dimensions and
+extremes of your final answer(s) make sense. Plug in numerical
+quantities only at the end. PHGN 100 Problem Solving Process</p></li>
+</ol>
+<h4 id="examples-1">Examples</h4>
+<h5 id="example-1-4">Example 1</h5>
+<p align="center">
+<img src="img5.png" style="height: 150px; width:auto;"/>
+</p>
+<p>A Blaster of mass <span class="math inline">\(m_B\)</span> is at rest
+and attached by cables at the center of a square room on Earth as shown.
+Given the magnitude of the tension <span
+class="math inline">\(T_{1B}\)</span>, find <span
+class="math inline">\(T_{2B}\)</span>.</p>
+<p><strong>Knowns:</strong> <span
+class="math inline">\(m_B,g,T_{1B},v_b=0, a_B=0,
+\theta=45^{\circ}\)</span> <strong>Unknowns:</strong> <span
+class="math inline">\(T_{2B}, T_{3B}\)</span></p>
+<p><span class="math inline">\(x: T_{2B}=T_{1B}\cos\theta -
+T_{3B}\cos\theta=m_{B}a_{B,x} = 0\)</span></p>
+<p><span class="math inline">\(y: T_{1B}\sin\theta -
+T_{3B}\sin\theta-W_{EB} = m_Ba_{B,y} = 0\)</span></p>
+<p><span class="math display">\[\Longrightarrow
+T_{3B}=T_{1B}-\frac{m_Bg}{\sin\theta}\]</span> <span
+class="math display">\[\Longrightarrow
+T_{2B}=\left(2T_{1B}-\frac{m_Bg}{\sin\theta}\right)\cos\theta\]</span></p>
+<h5 id="example-2-4">Example 2</h5>
+<p align="center">
+<img src="img6.png" style="height: 150px; width:auto;"/>
+</p>
+<p>A train is on level ground and moving with a constant acceleration. A
+Blaster with mass <span class="math inline">\(m_B\)</span> is hanging
+from a string attached to the ceiling of the train, and the string makes
+an angle <span class="math inline">\(\theta\)</span> with respect to the
+vertical. Derive expressions for the magnitude of the acceleration of
+the train <span class="math inline">\(a_T\)</span> and the tension in
+the rope connecting the train and Blaster <span
+class="math inline">\(T_{TB}\)</span>.</p>
+<p><strong>Knowns:</strong> <span
+class="math inline">\(m_B,g,\theta\)</span></p>
+<p><strong>Unknowns:</strong> <span class="math inline">\(a_T,
+T_{TB}\)</span></p>
+<p><span class="math inline">\(x: T_{TB}\sin\theta = ma_{B,x} =
+ma_{T}\)</span></p>
+<p><span class="math inline">\(y: T_{TB}\cos\theta -W_{EB} =
+ma_{B,y}\)</span></p>
+<p><span class="math display">\[T_{TB} = \frac{m_{B}g}{\cos
+\theta}\]</span></p>
+<blockquote>
+<p>As <span class="math inline">\(\theta \to 0, T_{Tb} \to
+m_{b}g\)</span> As <span class="math inline">\(\theta \to 90^{\circ},
+T_{Tb} \to \infty\)</span> <span class="math display">\[a_{T} =
+\frac{m_{B}g\sin\theta}{m_B\cos\theta} = g\tan\theta\]</span></p>
+</blockquote>
+<h3 id="topic-2-4-multi-object-dynamics">Topic 2-4: Multi-Object
+Dynamics</h3>
+<p align="center">
+<img src="cart.png" style="height: 100px; width:auto;"/>
+</p>
+<h4 id="multi-object-dynamics-i">Multi-Object Dynamics I</h4>
+<p>Now we can solve for the magnitude of the force of static friction
+between the block and the cart using the values below.</p>
+<p><strong>Unknowns:</strong> <span class="math inline">\(f_{s,BC},a_B =
+a_C= a_{B+C}\)</span></p>
+<p>System = <span class="math inline">\(B+C\)</span></p>
+<p><span class="math inline">\(x: F_{YB} = (m_B+m_C)a_x\)</span></p>
+<p><span class="math inline">\(a_x= \frac{F_{YB}}{m_B+m_C}\)</span></p>
+<p>System = <span class="math inline">\(C\)</span></p>
+<p><span class="math inline">\(x:f_{s,BC} = m_Ca_x\)</span></p>
+<p><span class="math inline">\(f_{s,BC} = \frac{m_C F_{YB}}{m_B+m_C} =
+71.4 \text{ N}\)</span></p>
+<p>Does not slip if <span class="math inline">\(f_{s,BC}&lt; f_{s,BC
+\max}\)</span> where <span class="math inline">\(f_{s,BC} = \mu_s
+N_{BC}\)</span></p>
+<h2 id="newtonian-dynamics-ii---advanced-translation">Newtonian Dynamics
+II - Advanced Translation</h2>
+<h3 id="topic-3-1-circular-motion">Topic 3-1: Circular Motion</h3>
+<h4 id="equations-3">Equations</h4>
+<p align="center">
+<img src="img7.png" style="height: 100px; width:auto;"/>
+</p>
+<p><strong>Centripetal:</strong> <span
+class="math inline">\(a_c(t)=\frac{v_t(t)^2}{R} = \omega(t)^2R\)</span>,
+responsible for changing direction of <span
+class="math inline">\(\vec{v}\)</span></p>
+<p><strong>Tangential:</strong> <span class="math inline">\(a_t(t)=
+\frac{\mathrm{d}v_t(t)}{\mathrm{d} t} = R\alpha(t)\)</span>, responsible
+for changing magnitude of <span
+class="math inline">\(\vec{v}\)</span>.</p>
+<p><strong>Angular kinematic quantities:</strong> <span
+class="math inline">\(\theta(t)=\frac{s(t)}{R},
+\omega(t)=\frac{\mathrm{d}\theta(t)}{\mathrm{d} t},\alpha(t) =
+\frac{\mathrm{d}\omega(t)}{\mathrm{d}t}\)</span></p>
+<p>Uniform circular motion is a specific type of motion in which an
+object travels in a circle with a constant speed. For example, any point
+on a propeller spinning at a constant rate is executing uniform circular
+motion.</p>
+<p>Sys=C</p>
+<p><span class="math inline">\(\longrightarrow \Sigma_{j}\vec{F_{jG}} =
+m_G\vec{a_G}\\ \longrightarrow \Sigma_{j}\vec{F_{jG,c}} = m_Ga_{G,c}\\
+\longrightarrow \Sigma_{j}\vec{F_{jG,t}} = m_Ga_{G,t}\)</span></p>
+<h5 id="example-1-5">Example 1</h5>
+<p align="center">
+<img src="img8.png" style="height: 100px; width:auto;"/>
+</p>
+<p>The gray turntable is spinning at a constant angular speed <span
+class="math inline">\(\omega\)</span>. If the green disk and red disks
+are identical (same mass,material, shape, coefficient of static
+friction, etc.), which disk is more likely to slip off the
+turntable?</p>
+<p>Slips when <span class="math inline">\(f_{s,td} = f_{s,td
+\max}\)</span>, thus we need to find both.</p>
+<p><strong>Unknown:</strong> <span class="math inline">\(f_{s,td} =
+f_{s,td \max}\)</span></p>
+<p><strong>Knowns:</strong> <span class="math inline">\(\omega, m_d,
+\mu_s, R\)</span></p>
+<p>The acceleration of the disk is towards the centre of the circle.</p>
+<p><span class="math display">\[y: N_{td} -m_dg= m_da_{d,y}
+\longrightarrow f_{s,td \max} = \mu_sN_{td} = \mu_sm_dg\]</span></p>
+<p><span class="math display">\[c: f_{s,td}=
+m_d\left(\frac{v^2}{R}\right)= m_d\left(\omega^2R\right)\]</span></p>
+<p>same <span class="math inline">\(m\)</span> and <span
+class="math inline">\(\omega\)</span> different <span
+class="math inline">\(v\)</span> and <span
+class="math inline">\(R\)</span></p>
+<p><strong>Answer:</strong> The red disk is more likely to slip.</p>
+<h5 id="example-2-5">Example 2</h5>
+<p>A motorcyclist is rounding a flat curve at a constant speed <span
+class="math inline">\(v\)</span>. She is more likely to slip if she
+rides along the outside edge of the curve.</p>
+<h5
+id="example-3---tangential-acceleration-in-nonuniform-circular-motion">Example
+3 - Tangential Acceleration in Nonuniform Circular Motion</h5>
+<p>Blaster (with mass <span class="math inline">\(m_b\)</span>) moves
+around a circle of radius <span class="math inline">\(R= 2 \text{
+m}\)</span> with an angular position <span
+class="math inline">\(\theta(t)=kt^2\)</span>, where <span
+class="math inline">\(𝑘= 180 \text{ deg/s}^2\)</span>. Calculate the
+magnitude of the net force at time <span class="math inline">\(𝑡 = 2
+\text{ s}\)</span>.</p>
+<p><strong>Knowns:</strong> <span
+class="math inline">\(R,k,t,\theta(t),m_b\)</span></p>
+<p><strong>Unknowns:</strong> <span class="math inline">\(a(t),\ldots
+a_c(t), a_t(t), \omega(t)\)</span></p>
+<p><span class="math display">\[a(t)=\sqrt{a_c(t)^2+a_t(t)^2}\]</span>
+<span class="math display">\[a_c(t)=R\omega(t)^2\]</span> <span
+class="math display">\[\omega(t) =\frac{\mathrm{d}\theta}{\mathrm{d}t} =
+2kt\]</span> <span class="math display">\[a_c(t)=4Rk^2t^2\]</span> <span
+class="math display">\[a_t(t)=R \alpha (t)\]</span> <span
+class="math display">\[\alpha(t)=\frac{\mathrm{d}\omega}{\mathrm{d}t} =
+2k\]</span> <span class="math display">\[a_t(t)=2R\]</span> <span
+class="math display">\[a(t)=\sqrt{(4Rk^2t^2)^2+(2Rk)^2}\]</span> <span
+class="math display">\[N2L \longrightarrow F(t)=m_ba(t)\]</span></p>
+<h3 id="topic-3-2-simple-harmonic-motion">Topic 3-2: Simple Harmonic
+Motion</h3>
+<h4 id="notes">Notes</h4>
+<ul>
+<li><p><span class="math inline">\(x_0\)</span> or <span
+class="math inline">\(y_0\)</span> is the position of end of unstretched
+or uncompressed spring</p></li>
+<li><p><span class="math inline">\(x_{\text{eq}}\)</span> or <span
+class="math inline">\(y_{\text{eq}}\)</span> is the position of end of
+spring at equilibrium</p></li>
+<li><p>The restoring force from an ideal spring: <span
+class="math inline">\(F_{\text{sp ab, }x} = – k[x(t)–
+x_0]\)</span></p></li>
+<li><p>The net external force in SHM: <span class="math inline">\(\Sigma
+F_x = – k[x(t)– x_{\text{eq}}]\)</span></p></li>
+<li><p><span class="math inline">\(\Sigma F_x\)</span> always restores
+the mass back towards <span
+class="math inline">\(x_{\text{eq}}\)</span>, so the system will
+oscillate about <span class="math inline">\(x_{\text{eq}}\)</span>, not
+necessarily <span class="math inline">\(x_0\)</span>!</p></li>
+</ul>
+<h4 id="equations-4">Equations</h4>
+<p><span class="math display">\[
+a*x(t)=-\omega^2\left[x(t)-x*{\text{eq}}\right]\]</span> <span
+class="math display">\[x(t)=A\cdot\sin(\omega t+\delta)+
+x\_{\text{eq}}\]</span> <span class="math display">\[f=\frac{1}{T};
+\omega = 2\pi f = \frac{2\pi}{T}\]</span></p>
+<h4 id="plotting-shm">Plotting SHM</h4>
+<blockquote>
+<p><span class="math inline">\(\delta =\frac{\pi}{2}\)</span>, <span
+class="math inline">\(x_{\text{eq}} =0\)</span></p>
+</blockquote>
+<p align="center">
+<img src="fig9.png" style="height: 300px; width:auto;"/>
+</p>
+<p><span class="math display">\[x(t)=A\sin(\omega t+ \delta)\]</span>
+<span class="math display">\[v_x(t)=A\omega\cos(\omega t+
+\delta)\]</span> <span class="math display">\[\begin{align*}
+a_x(t)&amp;=-A\omega^2\sin(\omega t+ \delta)\\
+&amp;=-\omega^2\left(x(t)-x_{\text{eq}}\right)\end{align*}\]</span></p>
+<h4 id="example-1-6">Example 1</h4>
+<p>Blaster (with mass <span class="math inline">\(m_B\)</span>) is
+attached to a fixed wall by two springs and slides with negligible
+friction on the table as shown. Both springs obey Hooke’s Law and have
+the same natural length <span class="math inline">\(x_0\)</span>, but
+different spring constants. Find the frequency of oscillation of
+Blaster.</p>
+<blockquote>
+<p><span class="math inline">\(\text{System}= B\)</span></p>
+</blockquote>
+<p><strong>Knowns:</strong> <span class="math inline">\(m_B, g,
+k_1,k_2,x_0\)</span></p>
+<p><strong>Unknowns:</strong> <span
+class="math inline">\(f,\omega\)</span></p>
+<p><span class="math display">\[\begin{align*} m_{B}a_{x} &amp;=
+F_{\text{sp 1} B} + F_{\text{sp 2} B} \\ m_{B}a_{x} &amp;=
+-k_{1}[x(t)-x_0]-k_2[x(t)-x_0]\\
+a_x(t)&amp;=\frac{-k_{1}[x(t)-x_0]-k_2[x(t)-x_0]}{m_B}\\
+a_x(t)&amp;=\frac{-(k_1+k_2)}{m_B}\cdot \left[x(t)-x_0\right]\\ \omega
+&amp;= \sqrt{\frac{(k_1+k_2)}{m_B}}\\ f&amp;=\frac{\omega}{2\pi}\\ f
+&amp;= \boxed{\frac{1}{2\pi}\sqrt{\frac{(k_1+k_2)}{m_B}}}
+\end{align*}\]</span></p>
+<h4 id="example-2-6">Example 2</h4>
+<p>Blaster is attached to two fixed walls by springs and slides with
+negligible friction on the table. Both springs remain stretched
+throughout the motion and have different spring constants. What is the
+angular frequency of oscillation of Blaster? <span
+class="math display">\[k_{\text{eff}}=k_1+k_2\]</span> <span
+class="math display">\[\boxed{\omega =
+\sqrt{\frac{k_{\text{eff}}}{m_B}}}\]</span></p>
+<h2 id="block-4-newtonian-dynamics-iii---rotation">Block 4: Newtonian
+Dynamics III - Rotation</h2>
+<h3 id="topic-4-1-vector-mathematics-ii">Topic 4-1: Vector Mathematics
+II</h3>
+<h4 id="cross-product">Cross Product</h4>
+<p><span class="math display">\[
+\begin{align*}
+\vec{V_1} \times \vec{V_2} &amp;= \left(V_{1x}\hat{i}+V_{1y}\hat{j}+
+V_{1z}\hat{k}\right) \times \left(V_{2x}\hat{i}+V_{2y}\hat{j}+
+V_{2z}\hat{k}\right)\\&amp;=
+\left(V_{1y}V_{2z}-V_{1z}V_{2y}\right)\hat{i}+
+\left(V_{1z}V_{2x}-V_{1x}V_{2z}\right)\hat{j}+\left(V_{1x}V_{2y}-V_{1y}V_{2x}\right)\hat{k}\\
+&amp;= \left|\begin{matrix} \hat{i} &amp; \hat{j} &amp; \hat{k}\\ V_{1x}
+&amp; V_{1y} &amp; V_{1z} \\V_{2x} &amp; V_{2y} &amp; V_{2z}
+\end{matrix} \right|\\
+&amp;= V_{1}V_{2}\sin(\theta); \, \text{Direction given by RHR}
+\end{align*}
+\]</span></p>
+<h4 id="dot-product">Dot Product</h4>
+<p><span class="math display">\[
+\begin{align*}
+\vec{V_1} \cdot \vec{V_2} &amp;=
+V_{1x}V_{2x}+V_{1y}V_{2y}+V_{1z}V_{2z}\\
+&amp;= V_{1}V_2\cos(\theta)
+\end{align*}
+\]</span></p>
+<h4 id="line-integral">Line Integral</h4>
+<p>A book (b) is sitting on the ground, and you pick it up and put it on
+a table as shown. For this process, calculate the following (called a
+line integral):</p>
+<ul>
+<li><span class="math inline">\(\vec{s_i} =
+x_i\hat{i}+y_i\hat{j}\)</span></li>
+<li><span class="math inline">\(\vec{s_i} =
+x_f\hat{i}+y_f\hat{j}\)</span></li>
+<li><span class="math inline">\(\vec{W_{Eb}} \cdot \mathrm{d} \vec{s} =
+-m_bg\hat{j} \cdot(\mathrm{d}x\hat{i}+\mathrm{d}y\hat{j}) =
+-m_bg\,\mathrm{d}y\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\int_{\vec{s_i}}^{\vec{\vec{s_f}}} \vec{W_{Eb}} \cdot  \mathrm{d}
+\vec{s} &amp;= \\
+&amp;= \int_{y_i}^{y_f} -m_bg\, \mathrm{d}y \\
+&amp;= -m_{b}g (y_f-y_i)
+\end{align*}
+\]</span></p>
+<h3
+id="topic-4-2-torque-moment-of-inertia-and-newtons-2nd-law-for-rotation">Topic
+4-2: Torque, Moment of Inertia, and Newton’s 2nd Law for Rotation</h3>
+<h4 id="equations-5">Equations</h4>
+<p><span class="math display">\[\sum_{j} \vec{\tau}_{F_{jb}} =
+\vec{\tau}_{\text{net},b} = I_{b}\vec{\alpha}_{b}\]</span> <span
+class="math display">\[I_b=cm_bd^2; c = \text{constant}\]</span> <span
+class="math display">\[\vec{\tau}_{F_{ab}} =
+\vec{r}\times\vec{F}_{ab}\]</span> <span
+class="math display">\[\tau_{F_{ab}}=rF_{ab}\sin\theta =
+r_{\bot}F_{ab}=rF_{ab \bot}\]</span></p>
+<p align="center">
+<img src="img12.png" style="height: 200px; width:auto;"/>
+</p>
+<h4 id="torque">Torque</h4>
+<p align="center">
+<img src="img10.png" style="height: 150px; width:auto;"/>
+</p>
+<h4 id="comparing-torque">Comparing Torque</h4>
+<p align="center">
+<img src="img11.png" style="height: 200px; width:auto;"/>
+</p>
+<blockquote>
+<p>Note: <span class="math inline">\(d_1 &gt; d_2 &gt; d_3\)</span>, and
+drawn to scale</p>
+</blockquote>
+<p>All systems are in equilibrium. In which case is the torque from the
+hanging block about the black dot largest?</p>
+<h4 id="efbd">EFBD</h4>
+<p>For Newton’s 2nd Law of Translation, we didn’t have to worry about
+where the force acted: <span class="math inline">\(\sum_{j} \vec{F}_{jb}
+= m_b \vec{a}_{b\mathrm{cm}}\)</span> But for Newton’s 2nd Law of
+Rotation, we must! <span class="math inline">\(\vec{W}_{Eb}\)</span> can
+draw as acting at the COM. For <span
+class="math inline">\(\vec{N}_{gb}\)</span> and <span
+class="math inline">\(\vec{f}_{s,gb}\)</span> need to use N2LR to figure
+out where to draw them. <span class="math inline">\(\sum_{j}
+\vec{F}_{jb} = m_{b} \vec{a}_{b\mathrm{cm}}\)</span></p>
+<h4 id="example">Example</h4>
+<p align="center">
+<img src="img12.png" style="height: 200px; width : auto;"/>
+</p>
+<p>Block (<span class="math inline">\(B\)</span>) is at rest on the
+inclined plane (P). This implies that <span
+class="math inline">\(\sum_{j} \vec{\tau}_{jB} = \vec{0}\)</span> about
+any axis. Which EFBD below has the normal force in the correct
+location?</p>
+<p align="center">
+<img src="img13.png" style="height: 200px; width:auto;"/>
+</p>
+<h3 id="topic-4-3-problem-solving-with-newtonian-dynamics">Topic 4-3:
+Problem Solving with Newtonian Dynamics</h3>
+<h4 id="example-1-7">Example 1</h4>
+<p align="center">
+<img src="img14.png" style="height: 200px; width:auto;"/>
+</p>
+<p>A block of mass <span class="math inline">\(m_b\)</span> hangs from a
+cable that is attached to the end of a uniform strut of length <span
+class="math inline">\(L\)</span> and mass <span
+class="math inline">\(m_s\)</span>. The strut is pinned at one end and
+also joined to the ground by a rope attached a distance d from the pin
+as shown.</p>
+<ol type="1">
+<li>Find the tension in the rope between the ground to the strut.</li>
+</ol>
+<p><span class="math display">\[\vec{\alpha} = \vec{0}, \Sigma
+\vec{\tau} =\vec{0}, \vec{a}=\vec{0}, \Sigma \vec{F} = \vec{0}\]</span>
+<strong>Knowns:</strong> <span
+class="math inline">\(m_b,g,L,m_s,d\)</span></p>
+<p><strong>Unknowns:</strong> <span
+class="math inline">\(T_{\mathrm{gs}}\)</span></p>
+<p><span class="math display">\[\text{AOR}: \tau_{T_{\mathrm{gs}}}-
+\tau_{W_{\mathrm{Eb}}} = 0\]</span> <span
+class="math display">\[dT_{\mathrm{gs}}\sin\theta -
+\frac{L}{2}m_sg\sin\phi - Lm_bg\sin\phi=0\]</span></p>
+<p><span class="math display">\[T_{\mathrm{gs}} = \frac{Lg\sin\phi
+\left(\frac{1}{2}m_s+m_b\right)}{d\sin\theta}\]</span></p>
+<ol start="2" type="1">
+<li>Now that we have <span
+class="math inline">\(T_{\mathrm{gs}}\)</span>, how would you find <span
+class="math inline">\(F_{\mathrm{ps}}\)</span>?</li>
+</ol>
+<blockquote>
+<p>N2L in both <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> directions</p>
+</blockquote>
+<p><span class="math display">\[\Sigma F_{\mathrm{jsys},x} = 0
+\longrightarrow T_{\mathrm{gs}}\sin\left(\theta+\phi\right)\]</span>
+<span class="math display">\[\Sigma F_{\mathrm{jsys},y} = 0
+\longrightarrow T_{\mathrm{gs}}\cos\left(\theta+\phi\right) +
+\left(m_s+m_b\right)g\]</span></p>
+<p><span class="math display">\[F_{\mathrm{ps}} =
+\sqrt{F_{\mathrm{ps},x}^2+ F_{\mathrm{ps},x}^2}\]</span></p>
+<h4 id="example-2-7">Example 2</h4>
+<p>A block with mass <span class="math inline">\(m_b\)</span> hangs from
+a string that is wrapped around a physical pulley with radius <span
+class="math inline">\(R_p\)</span> and moment of inertia <span
+class="math inline">\(I_p\)</span>. The pulley can rotate about an axle
+<span class="math inline">\((a)\)</span> with negligible friction. If
+the block <span class="math inline">\((b)\)</span> is released from
+rest, the magnitude of the tension between the block and the pulley is:
+<strong>less than</strong> <span class="math inline">\(m_bg\)</span></p>
+<h3 id="topic-4-4-rolling">Topic 4-4: Rolling</h3>
+<p align="center">
+<img style="border:1.5px dashed DarkSlateBlue;"src="img15.png" style="height: 200px; width:auto;"/>
+</p>
+<h4 id="rollin-rollin-rollin">Rollin’, Rollin’, Rollin’</h4>
+<p>A solid spherical ball starts from rest and rolls without slipping
+down an inclined plane. Which direction is the friction force on the
+ball?</p>
+<p><span class="math display">\[\boxed{\text{Up the plane}}\]</span></p>
+<blockquote>
+<p><span class="math inline">\(\vec{a}_{\mathrm cm}\)</span> and <span
+class="math inline">\(\vec{\alpha}_{cm}\)</span> are linked.</p>
+</blockquote>
+<p align="center">
+<img src="img16.png" style="height: 200px; width:auto;"/>
+</p>
+<h4 id="the-rolling-race">The Rolling Race</h4>
+<p>Three round objects start from rest and roll without slipping down an
+inclined plane. Which one reaches the bottom first?</p>
+<ol type="1">
+<li><p><span class="math inline">\(I_{\mathrm{sphere}}=
+\frac{2}{5}MR^2\)</span></p></li>
+<li><p><span class="math inline">\(I_{\mathrm{cylinder}}=
+\frac{1}{2}MR^2\)</span></p></li>
+<li><p><span class="math inline">\(I_{\mathrm{hoop}}=
+MR^2\)</span></p></li>
+<li><p><span class="math inline">\(I_{\mathrm{round~object}}= c \cdot
+MR^2\)</span></p></li>
+</ol>
+<p><strong>Knowns:</strong> <span
+class="math inline">\(\vec{f}_{\mathrm{s,pb}}\)</span>, <span
+class="math inline">\(\theta\)</span>, <span
+class="math inline">\(\vec{N}_{\mathrm{pb}}\)</span>, &amp; <span
+class="math inline">\(\vec{W}_{\mathrm{Eb}}\)</span></p>
+<p>The object with the biggest <span
+class="math inline">\(\vec{a}_{\mathrm{cm}}\)</span> (and <span
+class="math inline">\(\vec{\alpha}_{\mathrm{cm}}\)</span>) will win.
+Solve for <span
+class="math inline">\(\vec{\alpha}_{\mathrm{cm}}\)</span> using N2LT,
+N2LR, and the no-slip condition.</p>
+<p><span class="math display">\[x: m_{\mathrm{b}}g\sin\theta -
+f_{\mathrm{s,pb}} = m_{\mathrm{b}}a_{\mathrm{b,cm}}\]</span> <span
+class="math display">\[\text{AOR}:
+f_{\mathrm{s,pb}}R=I_{\mathrm{cm}}\alpha_{\mathrm{b,cm}}\]</span> <span
+class="math display">\[\text{No Slip}: R\alpha_{\mathrm{b,cm}} =
+a_{\mathrm{b,cm}}\]</span></p>
+<p><span class="math display">\[f_{\mathrm{s,pb}} =
+\frac{I_{\mathrm{cm}}a_{\mathrm{b,cm}}}{R^2}\]</span> <span
+class="math display">\[m_{\mathrm{b}}g\sin\theta -
+\frac{I_{\mathrm{cm}}a_{\mathrm{b,cm}}}{R^2} =
+m_{\mathrm{b}}a_{\mathrm{b,cm}}\]</span> <span
+class="math display">\[a_{\mathrm{b,cm}} =
+\frac{m_{\mathrm{b}}g\sin\theta}{m_{\mathrm{b}+
+\left(I_{\mathrm{cm}}/R^2\right)}}\]</span></p>
+<p><span class="math display">\[a_{\mathrm{b,cm}} =
+\underbrace{\frac{g\sin\theta}{1+c}}_{\text{Substituting using the
+equations above}}\]</span></p>
+<p><span class="math display">\[\boxed{\text{The round object will have
+the smallest value of $c$ and thus will have the largest
+$a_{\mathrm{b,cm}}$.}}\]</span></p>
+<h4 id="the-rolling-race-1">The Rolling Race</h4>
+<p>You are going to race two hoops down an incline plane. <span
+class="math inline">\(\text{Hoop 1}\)</span> is larger and heavier than
+<span class="math inline">\(\text{Hoop 2}\)</span>, with <span
+class="math inline">\(R_1=2R_2\)</span> and <span
+class="math inline">\(m_1=2m_2\)</span>. Which one reaches the bottom
+first? Recall <span class="math inline">\(I_{\mathrm{hoop}}=
+MR^2\)</span>.</p>
+<p><span class="math display">\[\boxed{\text{They tie}}\]</span></p>
+<p>The value of <span class="math inline">\(c\)</span> is the same for
+both hoops i.e., <span class="math inline">\((c=1)\)</span>.</p>
+<h4 id="the-double-radius-cylinder">The Double-Radius Cylinder</h4>
+<p>If the double-radius cylinder rolls without slipping on the table
+under the applied force shown, which way will its COM accelerate?</p>
+<p><span class="math display">\[\boxed{\text{To the left}}\]</span></p>
+<p align="center">
+<img src="img17.png" style="height: 200px; width:auto;"/>
+</p>
+<h4 id="the-double-radius-cylinder-ii">The Double-Radius Cylinder
+(II)</h4>
+<p>A large cylinder <span class="math inline">\((r = r_2)\)</span> is
+welded to two smaller cylinders <span class="math inline">\((r =
+r_1)\)</span> that act as an axle. If the small cylinders roll without
+slipping on the metal rods under the applied force shown, which way will
+the large cylinder’s COM accelerate?</p>
+<p>Guess <span class="math inline">\(\vec{a}_{\mathrm{cm}}
+\rightarrow\)</span>, which implies <span class="math inline">\(\sum
+\vec{F}_{\mathrm{jC}} \rightarrow\)</span>, which implies <span
+class="math inline">\(\vec{f}_{\mathrm{s,RC}} \rightarrow\)</span> and
+<span class="math inline">\(\vec{f}_{\mathrm{s,RC}}&gt;
+F_{\mathrm{YC}}\)</span>. No slip implies <span
+class="math inline">\(\vec{\alpha}_{\mathrm{cm}} \rightarrow\)</span>,
+which implies <span
+class="math inline">\(\sum\vec{\tau}_{jC}CW\)</span>, which implies
+<span class="math inline">\(r_{2}F_{\mathrm{YC}} &gt;
+r_{1}f_{\mathrm{s,RC}}\)</span>. We CAN have both <span
+class="math inline">\(\vec{f}_{\mathrm{s,RC}} &gt;
+F_{\mathrm{YC}}\)</span> and <span
+class="math inline">\(r_{2}F_{\mathrm{YC}} &gt;
+r_{1}f_{\mathrm{s,RC}}\)</span>.</p>
+<p><span class="math display">\[\boxed{\text{To the right}}\]</span></p>
+<p align="center">
+<img src="img18.png" style="height: 200px; width:auto;"/>
+</p>
+<h4 id="the-single-radius-cylinder">The Single-Radius Cylinder</h4>
+<p>Starting from rest, if the cylinder rolls without slipping on the
+table under the applied force shown, which way will its center of mass
+(COM) accelerate?</p>
+<p align="center">
+<img src="img19.png" style="height: 200px; width:auto;"/>
+</p>
+<ol type="1">
+<li><p>Guess <span class="math inline">\(\vec{a}_{\mathrm{cm}}
+\rightarrow\)</span>, which implies <span
+class="math inline">\(\sum\vec{F}_{\mathrm{jC}} \rightarrow\)</span>,
+which implies <span class="math inline">\(\vec{f}_{\mathrm{s,GC}}
+\rightarrow\)</span> and <span
+class="math inline">\(f_{\mathrm{s,GC}}&gt; F_{\mathrm{YC}}\)</span>. No
+slip implies <span
+class="math inline">\(\vec{\alpha}_{\mathrm{cm}}CW\)</span>, which
+implies <span class="math inline">\(\sum \vec{\tau}_{\mathrm{jC}}
+CW\)</span>, which implies <span
+class="math inline">\(rF_{\mathrm{YC}}&gt; r f_{\mathrm{s,GC}}\)</span>.
+But we can’t have both <span class="math inline">\(rF_{\mathrm{YC}}&gt;
+r f_{\mathrm{s,GC}}\)</span> and <span
+class="math inline">\(rF_{\mathrm{YC}} &lt; r f_{\mathrm{s,GC}}\)</span>
+, which is a contradiction!</p></li>
+<li><p>Guess <span class="math inline">\(\vec{a}_{\mathrm{cm}}
+\leftarrow\)</span>, which implies <span
+class="math inline">\(\sum\vec{F}_{\mathrm{jC}} \leftarrow\)</span>,
+which implies <span class="math inline">\(\vec{f}_{\mathrm{s,GC}}
+\leftarrow\)</span> and <span
+class="math inline">\(f_{\mathrm{s,GC}}&gt; F_{\mathrm{YC}}\)</span>. No
+slip implies <span
+class="math inline">\(\vec{\alpha}_{\mathrm{cm}}CCW\)</span>, which
+implies <span class="math inline">\(\sum \vec{\tau}_{\mathrm{jC}}
+CCW\)</span>, which implies <span
+class="math inline">\(rF_{\mathrm{YC}}&lt; r f_{\mathrm{s,GC}}\)</span>.
+But we can’t have both <span class="math inline">\(rF_{\mathrm{YC}}&gt;
+r f_{\mathrm{s,GC}}\)</span> and <span
+class="math inline">\(rF_{\mathrm{YC}} &lt; r f_{\mathrm{s,GC}}\)</span>
+, which is a contradiction!</p></li>
+</ol>
+<p><span class="math display">\[\boxed{\text{It can&#39;t
+roll}}\]</span></p>
+<h2 id="the-work-energy-theorem">The Work-Energy Theorem</h2>
+<h3 id="topic-5-1-work-and-translational-kinetic-energy">Topic 5-1: Work
+and Translational Kinetic Energy</h3>
+<h4 id="equations-6">Equations</h4>
+<ul>
+<li><span class="math inline">\(W_{\mathrm{tot}}= \Delta
+E_{\mathrm{sys}}\)</span></li>
+<li><span class="math inline">\(W_{\vec{F}_{\mathrm{ab}}}=
+\int_{\vec{s}_{i}}^{\vec{s}_f} \vec{F}_{\mathrm{ab}} \cdot
+d\vec{s}\)</span></li>
+<li><span class="math inline">\(E_{\mathrm{sys}} =
+K_{\mathrm{T}}+K_{\mathrm{R}}+E_{\mathrm{therm}}+ U_{\mathrm{g}}+
+U_{\mathrm{sp}} + E_{\mathrm{other}}\)</span></li>
+<li><span class="math inline">\(W_{\mathrm{tot}} = \Delta
+K_{\mathrm{T}}+\Delta K_{\mathrm{R}}+ \Delta E_{\mathrm{therm}}+ \Delta
+U_{\mathrm{g}}+ \Delta U_{\mathrm{sp}} + \Delta
+E_{\mathrm{other}}\)</span></li>
+<li><span class="math inline">\(K_{\mathrm{T}} = \frac{1}{2}mv^2
+\Longrightarrow \Delta K_{T} =
+\frac{1}{2}m\left(m_{f}^{2}-m_{i}^{2}\right)\)</span></li>
+</ul>
+<h4 id="important-points">Important Points</h4>
+<p><span class="math display">\[\boxed{W_{\mathrm{tot}} = \Delta
+E_{\mathrm{sys}}}\]</span></p>
+<ul>
+<li>Energies/work depend on choice of reference frame. Unless noted,
+always choose an observer at rest with respect to the ground.</li>
+<li>You must specify the system to determine which forces do work.
+<ul>
+<li>Force must be EXTERNAL to the system to do work</li>
+<li>Only displacement of the point where force is applied matters
+(“force displacement”)</li>
+</ul></li>
+<li>The work done by a conservative force has the following properties:
+<ul>
+<li>Independent of the path</li>
+<li>Depends only on endpoints</li>
+<li>Closed path → work = 0</li>
+</ul></li>
+<li>Conservative forces in PHGN100:
+<ul>
+<li>Gravitational and Ideal Spring</li>
+</ul></li>
+</ul>
+<h4 id="for-your-consideration">For Your Consideration</h4>
+<p align="center">
+<img src="img20.png" style="height: 200px; width:auto;"/>
+</p>
+<blockquote>
+<p>System: Block</p>
+</blockquote>
+<p><span class="math display">\[W_{\mathrm{tot}} = \Delta
+E_{\mathrm{sys}}\]</span></p>
+<p><span class="math display">\[W_{\vec{N}_\mathrm{tot}}= 0\]</span></p>
+<p><span class="math display">\[W_{\mathrm{tot}} =
+W_{\vec{W}_{\mathrm{Eb}}}\]</span> <span
+class="math display">\[W_{\vec{W}_{\mathrm{Eb}}} = \int_{0}^{\Delta
+y}m_{b}g \, dy = m_{b}g\Delta y \]</span></p>
+<p><span class="math display">\[v_{f} = \sqrt{2g\Delta y}\]</span></p>
+<h4 id="a-childish-question">A Childish Question?</h4>
+<p>A baby is doing push-ups on a level floor. He has a <span
+class="math inline">\(7 ~\text{kg}\)</span> mass and pushes his body
+from <span class="math inline">\(5~\text{cm}\)</span> above the floor to
+<span class="math inline">\(20~\text{cm}\)</span> above the floor. The
+work done on the baby by the normal force of the floor on the baby is:
+<strong>equal to zero</strong>. <span
+class="math display">\[W_{\vec{N}_{\mathrm{fb}}} =
+\int_{\vec{s}_{i}}^{\vec{s}_f} \vec{N}_{\mathrm{fb}} \cdot d\vec{s} =
+\int_{y_i}^{y_f}N_{\mathrm{fb}} \, dy = 0\]</span></p>
+<ul>
+<li>Work is being done on the baby arms.</li>
+<li>If the point of contact is not moving, there is no work by that
+force application</li>
+</ul>
+<h4 id="the-sign-of-work">The Sign of Work</h4>
+<p>A block is initially sliding to the right along a horizontal surface
+with negligible friction at a speed <span
+class="math inline">\(v_{i}\)</span>. When it passes the point <span
+class="math inline">\(x_{0}\)</span> a force <span
+class="math inline">\(\vec{F}_{\mathrm{ab}}\)</span> acting to the left
+begins to slow it down and reverses its motion. When the object gets
+back to the point <span class="math inline">\(x_{0}\)</span> it is
+moving with a speed <span class="math inline">\(v_{f} &lt;
+v_{i}\)</span>.</p>
+<p align="center">
+<img src="img21.png" style="height: 200px; width:auto;"/>
+</p>
+<p>Using the block as the system, from the time from when the block
+first passes <span class="math inline">\(x_{0}\)</span> to when it
+returns to <span class="math inline">\(x_{0}\)</span> the work done by
+the force <span class="math inline">\(\vec{F}_{\mathrm{ab}}\)</span> is
+<strong>negative</strong> and the force is
+<strong>nonconservative</strong>.</p>
+<p><span class="math display">\[
+\begin{align*}
+W_{\mathrm{tot}} &amp;= \Delta E_{\mathrm{sys}}\\
+W_{\vec{F}_{\mathrm{ab}}}+\underbrace{W_{\vec{N}_{\mathrm{tb}}}}_{0} +
+\underbrace{W_{\vec{W}_{\mathrm{EB}}}}_{0}&amp;= \Delta K_{\mathrm{T}}
+\end{align*}
+\]</span></p>
+<p><span class="math display">\[\Delta K_{\mathrm{T}} =
+\frac{1}{2}m\left(m_{f}^{2}-m_{i}^{2}\right)\]</span></p>
+<p><span class="math display">\[\Delta K_{\mathrm{T}} &lt; 0 \therefore
+W_{\vec{F}_{\mathrm{ab}}} &lt;0\]</span></p>
+<h4 id="putting-it-all-together">Putting It All Together</h4>
+<p align="center">
+<img src="img22.png" style="height: 200px; width:auto;"/>
+</p>
+<p>A block starts at rest and slides a distance <span
+class="math inline">\(d\)</span> down an incline with negligible
+friction.</p>
+<ol type="1">
+<li><p>What is the work done by gravity on the block? <span
+class="math display">\[W_{\vec{F}_{\mathrm{ab}}} =
+\int_{\vec{s}_i}^{\vec{s}_f} \vec{F}_{\mathrm{ab}} \cdot
+d\vec{s}\]</span> <span class="math display">\[\vec{W}_{\mathrm{Eb}}=
+m_{b}g(\sin\theta) \hat{i} - m_{b}g(\cos\theta) \hat{j}\]</span> <span
+class="math display">\[d\vec{s} = dx~\hat{i}+dy~\hat{j}\]</span> <span
+class="math display">\[W_{\vec{F}_{\mathrm{ab}}} = \int_{0}^{d}
+m_{b}g(\sin\theta) \, dx + \int_{0}^{d} m_{b}g(\cos\theta) \, dy =
+m_{b}g(\sin\theta) \cdot d\]</span></p></li>
+<li><p>What is the work done by the normal force on the block?</p></li>
+</ol>
+<p><span class="math display">\[W_{\mathrm{tot}} =
+\vec{W}_{\vec{W}_\mathrm{Eb}} +
+\underbrace{W_{\vec{N}_{\mathrm{Rb}}}}_{0}\]</span></p>
+<p><span class="math display">\[W_{\mathrm{tot}} =
+m_{b}g(\sin\theta)\cdot d\]</span></p>
+<h3 id="topic-5-2-rotational-kinetic-energy-and-thermal-energy">Topic
+5-2: Rotational Kinetic Energy and Thermal Energy</h3>
+<h4 id="equations-7">Equations</h4>
+<ul>
+<li><p><span class="math inline">\(E_{\mathrm{sys}} =
+K_{\mathrm{T}}+K_{\mathrm{R}}+E_{\mathrm{therm}}+ U_{\mathrm{g}}+
+U_{\mathrm{sp}} + E_{\mathrm{other}}\)</span></p></li>
+<li><p><span class="math inline">\(W_{\mathrm{tot}} = \Delta
+K_{\mathrm{T}}+\Delta K_{\mathrm{R}}+ \Delta E_{\mathrm{therm}}+ \Delta
+U_{\mathrm{g}}+ \Delta U_{\mathrm{sp}} + \Delta
+E_{\mathrm{other}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle
+W_{\vec{F}_{\mathrm{ab}}} = \int_{\vec{s}_{i}}^{\vec{s}_{f}}
+\vec{F}_{\mathrm{ab}} \cdot d\vec{s} = \int_{\theta_{i}}^{\theta_{f}}
+\vec{\tau}_{\mathrm{ab}} \cdot d\theta\)</span></p></li>
+<li><p><span class="math inline">\(K_{\mathrm{R}} = \frac{1}{2}
+I\omega^2\)</span></p></li>
+<li><p><span class="math inline">\(\Delta K_{\mathrm{R}} = \frac{1}{2}
+I\left(\omega_{f}^2-\omega_{i}^2\right)\)</span></p></li>
+<li><p><span class="math inline">\(E_{\mathrm{therm,ab}} =
+f_{\mathrm{k,ab}}s_{\mathrm{ab}}\)</span></p></li>
+</ul>
+<h4 id="work-energy-with-rotation-i">Work-Energy with Rotation I</h4>
+<p align="center">
+<img src="img23.png" style="height: 100px; width:auto;"/>
+</p>
+<p>A constant force <span
+class="math inline">\(\vec{F}_{\mathrm{YC}}\)</span> is applied to a
+cylinders that start from rest and rotates about a fixed, low-friction
+axle. After one full revolution, what is the change in its rotational
+kinetic energy? (System: Cylinder)</p>
+<p><span class="math display">\[
+\begin{align*}
+W_{\vec{F}_{\mathrm{ab}}} &amp;= \int_{\theta_{i}}^{\theta_{f}}
+\vec{\tau}_{\mathrm{ab}} \cdot d\theta\\
+&amp; = \int_{0}^{2\pi} (R)(F_{\mathrm{YC}}) \, d\theta\\
+&amp;= (2\pi)(R)(F_{\mathrm{YC}})\\
+&amp;= \Delta K_{\mathrm{R}}
+\end{align*}
+\]</span></p>
+<h4 id="work-energy-with-rotation-ii">Work-Energy with Rotation II</h4>
+<p align="center">
+<img src="img24.png" style="height: auto; width:auto;"/>
+</p>
+<p>A constant force <span
+class="math inline">\(\vec{F}_{\mathrm{YC}}\)</span> is applied to two
+identical cylinders that start from restand <strong>(1)</strong> rotates
+about a fixed, low-friction axle, and <strong>(2)</strong> rolls without
+slipping on a horizontal surface. After one full revolution, which
+cylinder has the larger change in (total) kinetic energy?</p>
+<blockquote>
+<p>Both cylinders traverse the same distance <span
+class="math inline">\(2\pi R\)</span></p>
+</blockquote>
+<p><span class="math display">\[\boxed{\text{The change in the total
+kinetic energy is the same.}}\]</span></p>
+<h4 id="work-and-rolling-without-slipping-cylinder">Work and Rolling
+Without Slipping cylinder</h4>
+<p align="center">
+<img src="img25.png" style="height: 200px; width:auto;"/>
+</p>
+<p>Reconsider the rolling race with a curved ramp. To determine the
+winner of the race, we will calculate the speed <span
+class="math inline">\(v_f\)</span> of a round object as it reaches the
+bottom of the ramp.</p>
+<p><span class="math display">\[W_{\mathrm{tot}} = \Delta
+E_{\mathrm{sys}} = \Delta K_{\mathrm{T}}+ \Delta
+K_{\mathrm{R}}\]</span></p>
+<ul>
+<li><span
+class="math inline">\(W_{\vec{N}_{\mathrm{RO}}}=0\)</span></li>
+<li><span
+class="math inline">\(W_{\vec{f}_{\mathrm{s,RO}}}=0\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\vec{W}_{EO} &amp;= (-mg)\hat{j} \, d\vec{s} = (dx)\hat{i}+
+(dy){\hat{j}}\\
+&amp;= \int_{y_1}^{y_f}(-mg) \, dy \\
+&amp;= mg(y_i-y_f)
+\end{align*}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align*}
+\Delta E_{\mathrm{sys}}&amp;=\Delta K_{\mathrm{T}}+ \Delta
+K_{\mathrm{R}}\\
+&amp;= \frac{1}{2}m\left(v_{f}^2 -v_{i}^2 \right)+
+\frac{1}{2}I\left(\omega_{f}^2 -\omega_{i}^2 \right)\\
+mg(y_i-y_f)&amp;= \frac{1}{2} \left(mv_{f}^2+I\omega_{f}^2\right)\\
+mg(y_i-y_f)&amp;= \frac{1}{2}
+\left(mv_{f}^2+(cmR^2)\frac{v_{f}^{2}}{R}\right)\\
+mg(y_i-y_f)&amp;= \frac{1}{2}mv_{f}^2\left(1+c\right)
+\end{align*}
+\]</span></p>
+<p><span class="math display">\[v_{f} =
+\sqrt{\frac{2g(y_i-y_f)}{1+c}}\]</span></p>
+<h4 id="thermal-energy-and-kinetic-friction">Thermal Energy And Kinetic
+Friction</h4>
+<p align="center">
+<img src="img26.png" style="height: 200px; width:auto;"/>
+</p>
+<p>A <span class="math inline">\(5~\text{kg}\)</span> book slides across
+a table with an initial kinetic energy of <span
+class="math inline">\(10~\text{J}\)</span>. If kinetic friction between
+the table and the book <span class="math inline">\((\mu_k =
+0.204)\)</span> causes the book to stop after <span
+class="math inline">\(1~\text{m}\)</span>, how much work does the
+kinetic friction force do on the book?</p>
+<blockquote>
+<p><span class="math inline">\(\Delta E_{\mathrm{therm}}\)</span> is
+unknown</p>
+</blockquote>
+<p><span class="math display">\[\boxed{\text{Unable to be
+determined}}\]</span></p>
+<h4 id="thermal-energy-and-kinetic-friction-ii">Thermal Energy And
+Kinetic Friction II</h4>
+<ul>
+<li><p>Given a force of kinetic friction between two objects and a
+displacement, the only quantity we can compute is the change in the
+thermal energy <span class="math inline">\(\Delta
+E_{\mathrm{therm}}\)</span> of the system that includes both
+objects.</p></li>
+<li><p>This quantity, <span class="math inline">\(\Delta
+E_{\mathrm{therm}}\)</span>, is always positive and depends on the total
+distance slid <span
+class="math inline">\(s_{\mathrm{ab}}\)</span>.</p></li>
+<li><p><span class="math inline">\(\boxed{\displaystyle \Delta
+E_{\mathrm{therm,ab}} = \int_{\vec{s}_{i}}^{\vec{s}_{f}}
+\vec{f}_{\mathrm{k,TB}} \cdot d\vec{s}=
+f_{\mathrm{k,TB}}s_{\mathrm{ab}}}\)</span></p></li>
+<li><p>You cannot compute the “work” done by a kinetic friction force
+<strong>without more information!</strong> (For example: 60% of the
+thermal energy generated goes into the book.)</p></li>
+</ul>
+<h3 id="topic-5-3-potential-energy">Topic 5-3: Potential Energy</h3>
+<h4 id="equations-8">Equations</h4>
+<ul>
+<li><p><span class="math inline">\(W_{\text{tot}}= \Delta
+E_{\mathrm{sys}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle
+W_{\vec{F}_{\text{ext}}}=
+\int_{\vec{s}_i}^{\vec{s}_f}\vec{F}_{\text{ext}} \cdot
+d\vec{s}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle
+U_{\vec{F}_{\text{int}}}=
+\int_{\vec{s}_i}^{\vec{s}_f}\vec{F}_{\text{int}} \cdot
+d\vec{s}\)</span></p></li>
+<li><p><span class="math inline">\(\Delta U_{\mathrm{g}}=
+m_{\mathrm{b}}g\left(y_{\mathrm{b,f}}-y_{\mathrm{b,i}}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\Delta U_{\mathrm{sp}}= \frac{1}{2}k
+\left(
+\left(x_{\mathrm{b,f}}-x_0\right)^2-\left(x_{\mathrm{b,i}}-x_0\right)^2\right)\)</span></p></li>
+</ul>
+<h2 id="the-impulse-momentum-theorem">The Impulse-Momentum Theorem</h2>
+<h3 id="topic-6-1-the-impulse-momentum-theorem">Topic 6-1: The
+Impulse-Momentum Theorem</h3>
+<h4 id="equations-9">Equations</h4>
+<ul>
+<li><p><span class="math inline">\(\displaystyle
+I_{\vec{F}_{\mathrm{ab}}} \equiv \int_{t_i}^{t_f} \vec{F}_{\mathrm{ab}}
+\, dt\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \vec{p}_{\mathrm{sys}}
+= m_{\mathrm{sys}}\vec{v}_{\mathrm{sys}}=
+\sum_{j}m_{j}\vec{v}_{j}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle K_{\mathrm{T}}=
+\frac{p^2}{2m} \Longrightarrow p =
+\sqrt{2mK_{\mathrm{T}}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle
+\vec{I}_{\mathrm{net,sys}} = \sum_{j} \vec{I}_{j\text{,sys}} = \Delta
+\vec{p}_{\mathrm{sys}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle
+\vec{F}_{\text{net,sys,av}} = \frac{\Delta \vec{p}}{\Delta
+t}\)</span></p></li>
+</ul>
+<h4 id="comparing-w-e-and-i-m">Comparing W-E and I-M</h4>
+<p align="center">
+<img src="img27.png" style="height: 400px; width:auto;"/>
+</p>
+<h4 id="big-small-i">Big &amp; Small (I)</h4>
+<p>A bowling ball and a golf ball are both purely translating with the
+same (nonzero) momentum. Which has the larger kinetic energy?</p>
+<p><span class="math display">\[\boxed{\text{The golf
+ball}}\]</span></p>
+<h4 id="big-small-ii">Big &amp; Small (II)</h4>
+<p>A bowling ball <span class="math inline">\((m_1)\)</span> and a golf
+ball <span class="math inline">\((m_2)\)</span> are both purely
+translating with the same initial (nonzero) momentum. If you exert the
+same constant force on each (in the opposite direction of the motion),
+which takes more time to stop?</p>
+<ul>
+<li><p><span class="math inline">\(m_1 &gt; m_2\)</span></p></li>
+<li><p><span class="math inline">\(K_{\text{T}} =
+\frac{p^2}{2m}\)</span> <span class="math display">\[\boxed{\text{It
+takes the same time.}}\]</span></p></li>
+</ul>
+<h4 id="big-small-iii">Big &amp; Small (III)</h4>
+<p>A bowling ball and a golf ball are both purely translating with the
+same initial (nonzero) momentum. If you exert the same constant force on
+each (in the opposite direction of the motion), which travels further
+before stopping?</p>
+<p><span class="math display">\[\boxed{\text{The golf
+ball}}\]</span></p>
+<h4 id="stumped">Stumped?</h4>
+<p>A normal bullet and a rubber bullet of the same mass are fired at
+log. Both hit the log with the same initial momentum. The normal bullet
+lodges itself inside the log, while the rubber bullet bounces off. If
+the time interval for stopping the normal bullet and reversing the
+rubber bullet are the same, which one is more likely to knock over the
+log? Hint: Which one corresponds to a greater average force?</p>
+<p><span class="math display">\[\boxed{\text{The rubber
+bullet}}\]</span></p>
+<h3 id="topic-6-2-collisions">Topic 6-2: Collisions</h3>
+<h4 id="pool-sharks">Pool Sharks</h4>
+<p>A cue ball and an eight ball are on a pool table. The cue ball hits
+the eight ball and the two balls leave the collision as shown. If the
+initial time is just before the collision between the two balls, and the
+final time is just after, what is true about the eight ball’s linear
+momentum during this collision?</p>
+<p align="center">
+<img src="img28.png" style="height: 100px; width:auto;"/>
+</p>
+<p><span class="math display">\[\boxed{\text{It is NOT
+constant}}\]</span></p>
+<h4 id="when-is-momentum-constant">When is Momentum Constant?</h4>
+<p>If <span class="math inline">\(\vec{I}_{\text {net,sys }}=\Delta
+\vec{p}_{\text {sys }}\)</span> then when is <span
+class="math inline">\(\Delta \vec{p}_{\text {sys }}=\vec{0} ?\)</span>
+That is, when is momentum constant, i.e. <span
+class="math inline">\(\vec{p}_{\text {sys }, \mathrm{i}}=\vec{p}_{\text
+{sys }, \mathrm{f}}\)</span> ?</p>
+<ul>
+<li>If the sum of the forces is zero in a given direction, then momentum
+is constant in that direction:</li>
+</ul>
+<p><span class="math display">\[\boxed{\sum_j \vec{F}_{j,
+\mathrm{sys}}=\vec{0} \Rightarrow \sum_j \vec{I}_{j, \mathrm{sys}}
+\equiv \int_{t_{\mathrm{i}}}^{t_{\mathrm{f}}} \sum_j \vec{F}_{j,
+\mathrm{sys}} d t=\vec{0} \Rightarrow \Delta
+\vec{p}_{\mathrm{sys}}=\vec{0}}\]</span></p>
+<ul>
+<li>Also, <span class="math inline">\(\Delta t \sum_j \vec{F}_{j, \text
+{ sys,av }}=\Delta \vec{p}_{\text {sys }}\)</span>. So if the time
+interval is short enough, and the external forces are not too large,
+then you can also use that momentum is constant: <span
+class="math display">\[\boxed{\sum_j \vec{F}_{j, \text { sys,av }} \text
+{ small, and } \Delta t \approx 0 \Rightarrow \Delta t \sum_j
+\vec{F}_{j, \text { sys,av }}=\Delta \vec{p}_{\text {sys }} \approx
+\vec{0}}\]</span></li>
+</ul>
+<h4 id="elastic-vs.-inelastic">Elastic vs. Inelastic</h4>
+<ul>
+<li><p><strong>Elastic Collisions:</strong> (objects do not deform,
+microscopic, noncontact and idealized scenarios) Kinetic energy IS
+constant.</p></li>
+<li><p><strong>Inelastic Collisions:</strong> (objects typically deform,
+most macroscopic collisions) Kinetic energy is NOT constant.</p></li>
+</ul>
+<p>Classify the following collisions as approximately elastic collision
+(EC), an inelastic collision (IC), or cannot be treated as a collision
+(NC):</p>
+<ol type="1">
+<li>Two billiard balls colliding</li>
+<li>A satellite “slingshot” around a planet</li>
+<li>A car crash</li>
+<li>An object “exploding” into three fragments</li>
+</ol>
+<p><span class="math display">\[\boxed{\text{EC, EC, IC,
+IC}}\]</span></p>
+<h4 id="a-2d-collision">A 2D Collision</h4>
+<p align="center">
+<img src="img29.png" style="height: 100px; width:auto;"/>
+</p>
+<p>Two objects of equal mass collide as shown above. If <span
+class="math inline">\(v_{1i}=3 ~\text{m/s}\)</span>, <span
+class="math inline">\(v_{2i}=4~\text{m/s}\)</span> and <span
+class="math inline">\(v_{1f}=5 ~\text{m/s}\)</span>, is the collision
+elastic (Yes)?</p>
+<blockquote>
+<p>Sys = <span class="math inline">\(m_1+m_2\)</span></p>
+</blockquote>
+<ul>
+<li><p><span class="math inline">\(\vec{I}_{\mathrm{net}} = \vec{0}
+\rightarrow \Delta \vec{p}_{\mathrm{sys}}=\vec{0}\)</span></p></li>
+<li><p><span
+class="math inline">\(\vec{p}_{\text{i,sys}}=\vec{p}_{\text{f,sys}}\)</span></p></li>
+<li><p><span class="math inline">\(p_{1i,x}+p_{2i,x} =
+p_{1f,x}+p_{2f,x}\)</span></p></li>
+<li><p><span
+class="math inline">\(-m_2v_{2i}=-m_1v_{1f}\cos\theta\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \cos \theta =
+\frac{m_2v_{2i}}{m_1v_{1f}}= \frac{v_{2i}}{v_{1f}} \Longrightarrow
+\arccos\left(\frac{v_{2i}}{v_{1f}}\right) = \theta\)</span></p></li>
+</ul>
+<h3 id="topic-6-3-angular-momentum">Topic 6-3: Angular Momentum</h3>
+<h4 id="equations-10">Equations</h4>
+<ul>
+<li><p><span
+class="math inline">\(\vec{L}_{\text{particle}}=\vec{r}\times\vec{p}_{\text{particle}}\)</span></p></li>
+<li><p><span
+class="math inline">\(\vec{L}_{\text{object}}=I_{\text{object}}\vec{\omega}_{\text{object}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \sum_{j}
+\vec{I}_{j,\text{sys}}= \int_{t_i}^{f_f} \sum_{j} \tau_{j,\text{sys}} \,
+dt = \Delta \vec{L}_{\text{sys}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle K_{\text{R}}
+=\frac{1}{2}I\omega^2 = \frac{L^2}{2I}\)</span></p></li>
+</ul>
+<h4 id="angular-momentum">Angular Momentum</h4>
+<p align="center">
+<img src="img30.png" style="height: 400px; width:auto;"/>
+</p>
+<h4 id="angular-momentum-of-a-single-particle">Angular Momentum of a
+Single Particle</h4>
+<p align="center">
+<img src="img31.png" style="height: 200px; width:auto;"/>
+</p>
+<p>If <span class="math inline">\(\vec{v}\)</span> is constant, the
+particle’s angular momentum at Position 1 (with respect to the point
+shown) is <strong>the same as</strong> the particle’s angular momentum
+at Position 2.</p>
+<p><span
+class="math display">\[\boxed{r_{1,\bot}=r_{2,\bot}}\]</span></p>
+<h4 id="angular-momentum-of-a-system-of-particles">Angular Momentum of a
+System of Particles</h4>
+<p align="center">
+<img src="img32.png" style="height: 100px; width:auto;"/>
+</p>
+<p>Two objects of mass <span class="math inline">\(50~\text{kg}\)</span>
+move along parallel paths separated by <span
+class="math inline">\(3~\text{m}\)</span>. Both objects have equal
+speeds of <span class="math inline">\(2.0 ~\text{m/s}\)</span>. What is
+the magnitude of the total angular momentum of the two-object system
+about a point that is in the middle of them?</p>
+<p><span
+class="math display">\[L_{B}=\vec{r}_{B,\bot}m\vec{v}_{B}\]</span> <span
+class="math display">\[L_{R}=\vec{r}_{R,\bot}m\vec{v}_{R}\]</span> <span
+class="math display">\[|\vec{L}_{\text{total}}|=2r_{\bot}mv =
+300~\text{kg}\cdot\text{m}^2/\text{s}\]</span></p>
+<h4 id="reminder-constant-linear-momentum">Reminder: Constant Linear
+Momentum</h4>
+<p>If <span class="math inline">\(\vec{I}_{\text {net,sys }}=\Delta
+\vec{p}_{\text {sys }}\)</span> then when is <span
+class="math inline">\(\Delta \vec{p}_{\text {sys }}=\vec{0} ?\)</span>
+That is, when is momentum constant, i.e. <span
+class="math inline">\(\vec{p}_{\text {sys, } \mathrm{i}}=\vec{p}_{\text
+{sys, }, \mathrm{f}}\)</span> ?</p>
+<ul>
+<li>If the sum of the forces is zero in a given direction, then momentum
+is constant in that direction:</li>
+</ul>
+<p><span class="math display">\[\boxed{\sum_j \vec{F}_{j, \text { sys
+}}=\vec{0} \Rightarrow \sum_j \vec{I}_{j, \text { sys }} \equiv
+\int_{t_{\mathrm{i}}}^{t_{\mathrm{f}}} \sum_j \vec{F}_{j, \text { sys }}
+d t=\vec{0} \Rightarrow \Delta
+\vec{p}_{\mathrm{sys}}=\vec{0}}\]</span></p>
+<ul>
+<li>Also, <span class="math inline">\(\Delta t \sum_j \vec{F}_{j, \text
+{ sys,av }}=\Delta \vec{p}_{\text {sys }}\)</span>. So if the time
+interval is short enough, and the external forces are not too large,
+then you can also use that momentum is constant:</li>
+</ul>
+<p><span class="math display">\[\boxed{\sum_j \vec{F}_{j, \text { sys,av
+}} \text { small, and } \Delta t \approx 0 \Rightarrow \Delta t \sum_j
+\vec{F}_{j, \text { sys,av }}=\Delta \vec{p}_{\text {sys }} \approx
+\vec{0}}\]</span></p>
+<h4 id="constant-angular-momentum">Constant Angular Momentum</h4>
+<p>When is angular momentum constant, i.e. <span
+class="math inline">\(\vec{L}_{\mathrm{sys},
+\mathrm{i}}=\vec{L}_{\mathrm{sys}, \mathrm{f}}\)</span> ?</p>
+<ul>
+<li>If the sum of the torques is zero about an axis, then the angular
+momentum about that axis is constant:</li>
+</ul>
+<p><span class="math display">\[\boxed{\sum_j \vec{\tau}_{j,
+\mathrm{sys}}=\vec{0} \Rightarrow \sum_j \vec{I}_{j, \mathrm{sys}}
+\equiv \int_{t_{\mathrm{i}}}^{t_{\mathrm{f}}} \sum_j \vec{\tau}_{j,
+\mathrm{sys}} d t=\vec{0} \Rightarrow \Delta
+\vec{L}_{\mathrm{sys}}=\vec{0}}\]</span></p>
+<ul>
+<li>Recall that <span class="math inline">\(\Delta t \sum_j
+\vec{\tau}_{j, \text { sys,av }}=\Delta \vec{L}_{\text {sys }}\)</span>.
+So if the time interval is short enough, and the external torques are
+not too large, then you can also use that angular momentum is
+constant:</li>
+</ul>
+<p><span class="math display">\[\boxed{\sum_j \vec{\tau}_{j, \text {
+sys,av }} \text { small, and } \Delta t \approx 0 \Rightarrow \Delta t
+\sum_j \vec{\tau}_{j, \text { sys,av }}=\Delta \vec{L}_{\text {sys }}
+\approx \vec{0}}\]</span></p>
+<h2 id="more-calculus-in-physics">More Calculus in Physics</h2>
+<h3 id="topic-7-1-potential-energy-functions">Topic 7-1: Potential
+Energy Functions</h3>
+<h4 id="equations-11">Equations</h4>
+<p><span class="math display">\[\Delta U_{\vec{F}_{\mathrm{int},
+\mathrm{ab}}}=-\int_{\vec{s}_{\mathrm{i}}}^{\vec{s}_{\mathrm{f}}}
+\vec{F}_{\mathrm{int}, \mathrm{ab}} \cdot d \vec{s} \\
+U_{\vec{F}_{\mathrm{int}, \mathrm{ab}}}= -\int \vec{F}_{\mathrm{int},
+\mathrm{ab}} \cdot d \vec{s}
+\]</span></p>
+<p><strong>Examples</strong> <em>(object a remains at rest)</em>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta U_{\mathrm{g}} &amp; =m
+g\left(y_{\mathrm{f}}-y_{\mathrm{i}}\right) \Rightarrow U_{\mathrm{g}}=m
+g y+C \\
+\Delta U_{\mathrm{sp}} &amp; =\frac{1}{2}
+k\left(x_{\mathrm{f}}-x_0\right)^2-\frac{1}{2}
+k\left(x_{\mathrm{i}}-x_0\right)^2 \Rightarrow
+U_{\mathrm{sp}}=\frac{1}{2} k x^2+C
+\end{aligned}
+\]</span></p>
+<h4 id="analyze-this">Analyze this …</h4>
+<h5 id="part-1-1">Part 1</h5>
+<p>A particle <span class="math inline">\(b\)</span> moves along the
+x-axis subject to a single conservative force that varies as <span
+class="math inline">\(\vec{F}_{\mathrm{ab}}=(-A+Bx+Cx^2)\:
+\hat{\mathbf{i}}\)</span>, where <span
+class="math inline">\(A=1~\text{N}\)</span>,<span
+class="math inline">\(B=1~\text{N/m}\)</span> and <span
+class="math inline">\(A=1~\text{N/m}^2\)</span> , and object a remains
+at rest. If <span class="math inline">\(b\)</span> is released from rest
+at <span class="math inline">\(x=-0.5\)</span>, determine its subsequent
+motion.</p>
+<p>System: <span class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span></p>
+<p><span class="math inline">\(W_{\mathrm{tot}} = \Delta
+E_{\mathrm{sys}}\)</span></p>
+<p><span class="math display">\[\begin{align*}
+-\int\vec{F}_{\mathrm{ab}} \, d\vec{s} &amp;=\\
+U_{\vec{F}_{\mathrm{int,ab}}} &amp;=
+Ax-\frac{1}{2}Bx^2-\frac{1}{3}Cx^2\\
+\end{align*}\]</span></p>
+<h5 id="part-2-1">Part 2</h5>
+<p align="center">
+<img src="img33.png" style="height: 250px; width:auto;"/>
+</p>
+<h5 id="part-3">Part 3</h5>
+<p>Now if <span class="math inline">\(b\)</span> is released at <span
+class="math inline">\(x=-1~\mathrm{m}\)</span> with <span
+class="math inline">\(2~\text{J}\)</span> of kinetic energy, determine
+its subsequent motion.</p>
+<p><span class="math display">\[\boxed{\text{It will oscillate in the
+valley.}}\]</span></p>
+<h5 id="part-4">Part 4</h5>
+<p>Now if <span class="math inline">\(b\)</span> is released at <span
+class="math inline">\(x=0~\mathrm{m}\)</span> with <span
+class="math inline">\(1~\text{J}\)</span> of kinetic energy, determine
+its kinetic energy when it reaches the point 🟢 shown below.</p>
+<p align="center">
+<img src="img34.png" style="height: 250px; width:auto;"/>
+</p>
+<p><span class="math display">\[\boxed{2~\text{J}}\]</span></p>
+<h4 id="getting-vecf_text-int-a-b-from-u_vecf_text-int-a-b">Getting
+<span class="math inline">\(\vec{F}_{\text {int }, a b}\)</span> from
+<span class="math inline">\(U_{\vec{F}_{\text {int }, a
+b}}\)</span></h4>
+<p>If we have a potential energy function then we can “undo” the
+integral to find the associated force:</p>
+<p><span class="math display">\[\boxed{\begin{align*}
+\vec{F}_{\text {int }, a b} &amp;=-\vec{\nabla} U_{\vec{F}_{\text {int
+}, a b}}(x,y,z) =-\frac{\partial U_{\vec{F}_{\text {int }, a
+b}}}{\partial x} \hat{i}-\frac{\partial U_{\vec{F}_{\text {int }, a
+b}}}{\partial y} \hat{j} -\frac{\partial U_{\vec{F}_{\text {int }, a
+b}}}{\partial z} \hat{k} \\
+\vec{F}_{\text {int }, a b} &amp;=-\vec{\nabla} U_{\vec{F}_{\text {int
+}, a b}}(r) =-\frac{\partial U_{\vec{F}_{\text {int }, a b}}}{\partial
+r} \hat{r} \\
+\end{align*}}\]</span></p>
+<p><strong>Note:</strong> This uses the “gradient” or 3D slope of the
+potential function.</p>
+<p><em>Examples:</em></p>
+<p><span class="math display">\[
+\begin{array}{ll}
+U_{\mathrm{g}}=m g y &amp; U_{\mathrm{sp}}=\frac{1}{2}
+k\left(x-x_0\right)^2 \\
+\Rightarrow \vec{W}_{\mathrm{Eb}}=-\frac{d}{d y}(m g y) \hat{\jmath}=-m
+g \hat{\jmath} &amp; \Rightarrow \vec{F}_{\mathrm{sp}, a b}=-\frac{d}{d
+x}\left[\frac{1}{2} k\left(x-x_0\right)^2\right]
+\hat{\imath}=-k\left(x-x_0\right) \hat{\imath}
+\end{array}
+\]</span></p>
+<h4 id="getting-equilibrium-from-u_vecf_mathrmintab">Getting equilibrium
+from <span
+class="math inline">\(U_{\vec{F}_{\mathrm{int},ab}}\)</span></h4>
+<p>If we have the potential energy function then we can determine the
+equilibrium positions and their stability by:</p>
+<p><span class="math display">\[\boxed{\left.\frac{d
+U_{\vec{F}_{\mathrm{int}, a b}}(x)}{d
+x}\right|_{x_{\mathrm{eq}}}=0,\left.\frac{d^2 U_{\vec{F}_{\mathrm{int},
+a b}}(x)}{d^2 x}\right|_{x_{\mathrm{eq}}}\left\{\begin{array}{l}
+&gt;0 \text { stable } \\
+&lt;0 \text { unstable }
+\end{array}\right.}\]</span></p>
+<p><strong>Note:</strong> This uses the slope and concavity of the
+potential energy function.</p>
+<h4 id="test-your-understanding">Test Your Understanding</h4>
+<p>Particle <span class="math inline">\(b\)</span> starts from rest at
+point <span class="math inline">\(\mathbf{(i)}\)</span> and moves in the
+potential shown. Where will it have the largest speed and where will it
+have the largest magnitude of acceleration?</p>
+<p align="center">
+<img src="img35.png" style="height: 250px; width:auto;"/>
+</p>
+<p><span
+class="math display">\[\boxed{v_{\text{max}}~\text{at}~\mathbf{(ii)}~\text{and}~a_{\text{max}}~\text{at}~\mathbf{(i)}}\]</span></p>
+<h4 id="why-do-we-care-about-pe-functions">Why do we care about PE
+functions?</h4>
+<ol type="1">
+<li><p>They allow us to determine the total energy of a system, which is
+a useful physical quantity.</p></li>
+<li><p>They allow us to qualitatively describe the motion.</p></li>
+<li><p>They allow us to identify and characterize equilibrium
+positions.</p></li>
+<li><p>They allow us to do quantitative calculations that would
+otherwise be pretty hard.</p></li>
+</ol>
+<p><span class="math display">\[\boxed{\text{F, T, T, F}}\]</span></p>
+<h3 id="topic-7-2-inertial-calculus">Topic 7-2: Inertial Calculus</h3>
+<p><span class="math display">\[\begin{aligned}
+&amp; \textbf { Discrete: } m_{\mathrm{tot}}=\sum_i m_i ; \quad I=\sum_i
+I_i ; \quad \vec{r}_{\mathrm{cm}}=\frac{1}{m_{\mathrm{tot}}} \sum_i
+\vec{r}_i m_i \\
+&amp; \textbf { Continuous: } m_{\mathrm{tot}}=\int d m ; I=\int d I ;
+\quad \vec{r}_{\mathrm{cm}}=\frac{1}{m_{\mathrm{tot}}} \int
+\vec{r}_{\mathrm{cm}, \mathrm{dm}} \,dm
+\end{aligned}\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\text{1-D: } dm=\lambda dl \text {
+where } \lambda=\text { mass/unit length }(\mathrm{kg} /
+\mathrm{m})\)</span></p></li>
+<li><p><span class="math inline">\(\text{2-D: } d m=\sigma d A \text {
+where } \sigma=\text { mass/unit area }\left(\mathrm{kg} /
+\mathrm{m}^2\right)\)</span></p></li>
+<li><p><span class="math inline">\(\text{3-D: } d m=\rho d V \text {
+where } \rho=\text { mass/unit volume }\left(\mathrm{kg} /
+\mathrm{m}^3\right)\)</span></p></li>
+</ul>
+<h4 id="d-continuous-mass-distribution">2D Continuous Mass
+Distribution</h4>
+<p>The 2-D object shown below has mass density which varies as <span
+class="math inline">\(\sigma\left(x\right) =
+\lambda_{0}\left(a-x\right).\)</span> We want to calculate the
+object’s</p>
+<ol type="1">
+<li>total mass, <span class="math inline">\(m_{\text{tot}}\)</span></li>
+<li>moment of inertia about the <span
+class="math inline">\(y\)</span>-axis, <span
+class="math inline">\(I_y\)</span>−axis</li>
+<li>moment of inertia about the <span
+class="math inline">\(x\)</span>-axis, <span
+class="math inline">\(I_x\)</span>−axis</li>
+<li>position of the center of mass, <span
+class="math inline">\(\vec{r}_{\text{cm}}\)</span></li>
+</ol>
+<p align="center">
+<img src="img36.png" style="height: 300px; width:auto;"/>
+</p>
+<p align="center">
+<img src="img37.png" style="height: 300px; width:auto;"/>
+</p>
+<h4 id="moments-of-inertia-i-and-di">Moments of Inertia, <span
+class="math inline">\(I\)</span> and <span
+class="math inline">\(dI\)</span></h4>
+<h4 id="inertial-integrals">Inertial Integrals</h4>
+<p>Calculating an Object’s Center of Mass</p>
+<p><span class="math display">\[
+\begin{array}{r}
+x_{\mathrm{cm}, \mathrm{tot}}=\frac{1}{m_{\mathrm{tot}}} \int
+x_{\mathrm{cm}, \mathrm{dm}} d m \\[1em]
+\vec{r}_{\mathrm{cm}, \mathrm{tot}}=\frac{1}{m_{\mathrm{tot}}} \int
+\vec{r}_{\mathrm{cm}, \mathrm{dm}} d m \Rightarrow y_{\mathrm{cm},
+\mathrm{tot}}=\frac{1}{m_{\mathrm{tot}}} \int y_{\mathrm{cm},
+\mathrm{dm}} d m \\[1em]
+z_{\mathrm{cm}, \mathrm{tot}}=\frac{1}{m_{\mathrm{tot}}} \int
+z_{\mathrm{cm}, \mathrm{dm}} d m
+\end{array}
+\]</span> <span class="math inline">\(\vec{r}_{\mathrm{cm}, d m}
+\quad\)</span>… points from origin to center of mass of <span
+class="math inline">\(d m\)</span></p>
+<ul>
+<li>NOTE: You must include limits in your integral!</li>
+</ul>
+<h3 id="topic-7-3-advanced-gravitation">Topic 7-3: Advanced
+Gravitation</h3>
+<h4 id="equations-12">Equations</h4>
+<p><span class="math display">\[\begin{aligned}
+&amp; \vec{r}_{21}=\vec{r}_1-\vec{r}_2 \\
+&amp; \vec{F}_{21}=-G \frac{m_2 m_1}{r_{21}^2} \hat{r}_{21}=-G \frac{m_2
+m_1}{r_{21}{ }^3} \vec{r}_{21} \\
+&amp; \vec{g}\left(\vec{r}_1\right)=-\sum_{k=2}^N G \frac{m_k}{r_{k
+1}^2} \hat{r}_{k 1}=-\sum_{k=2}^N G \frac{m_k}{r_{k 1}^3} \vec{r}_{k 1}
+\end{aligned}\]</span></p>
+<p><span class="math display">\[
+\vec{F}_{21}=-G \frac{m_2 m_1}{r_{21}{ }^2} \hat{r}_{21}=-G \frac{m_2
+m_1}{r_{21}{ }^3} \vec{r}_{21}
+\]</span></p>
+<ul>
+<li><p>Relative position vector: <span
+class="math inline">\(\vec{r}_{21}=\vec{r}_1-\vec{r}_2\)</span></p></li>
+<li><p>Unit vector: <span
+class="math inline">\(\hat{r}_{21}=\vec{r}_{21} /
+r_{21}\)</span></p></li>
+<li><p>Attractive force: Always pulls in (“gravity sucks”)</p></li>
+<li><p>Intrinsically satisfies Newton’s <span
+class="math inline">\(3^{\text {rd }}\)</span> Law:</p></li>
+</ul>
+<p><span class="math inline">\(\vec{F}_{21}=-\vec{F}_{12}\)</span></p>
+<p align="center">
+<img src="img38.png" style="height: 300px; width:auto;"/>
+</p>
+<h4 id="a-new-idea-the-gravitational-field">A New Idea: The
+Gravitational Field</h4>
+<ul>
+<li>Recall … to calculate the force on a mass <span
+class="math inline">\(m_1\)</span> due to a collection of other masses
+we used: <span class="math display">\[
+\begin{aligned}
+\vec{F}_{\text {net }, 1} &amp; =\vec{F}_{21}+\vec{F}_{31}+\vec{F}_{41}
+\cdots \\
+&amp; =-G \frac{m_2 m_1}{r_{21}{ }^3} \vec{r}_{21}-G \frac{m_3
+m_1}{r_{31}{ }^3} \vec{r}_{31}-G \frac{m_4 m_1}{r_{41}{ }^3}
+\vec{r}_{41} \cdots \\
+&amp; =\sum_{k=2}^N\left(-G \frac{m_k m_1}{r_{k 1}{ }^3} \vec{r}_{k
+1}\right)
+\end{aligned}
+\]</span></li>
+<li>Since <span class="math inline">\(m_1\)</span> is common in every
+term, we can factor it out of the sum to obtain: <span
+class="math display">\[
+\vec{F}_{\text {net }, 1}=m_1 \underbrace{\sum_{k=2}^N\left(-G
+\frac{m_k}{r_{k 1}{ }^3} \vec{r}_{k
+1}\right)}_{\vec{g}\left(\vec{r}_1\right)}
+\]</span></li>
+<li>For a given system of masses, the term <span
+class="math inline">\(\vec{g}\left(\vec{r}_1\right)\)</span> only
+depends on the position <span class="math inline">\(\vec{r}_1\)</span>.
+If we want to calculate the force on a new mass <span
+class="math inline">\(m_{\text {new mass }}\)</span> at the same
+position <span class="math inline">\(\vec{r}_1\)</span>, then we just
+replace <span class="math inline">\(m_1\)</span> by <span
+class="math inline">\(m_{\text {new mass }}\)</span> to get <span
+class="math display">\[
+\vec{F}_{\text {net,new mass }}=m_{\text {new mass }}
+\vec{g}\left(\vec{r}_1\right)
+\]</span></li>
+</ul>
+</body>
+</html>
